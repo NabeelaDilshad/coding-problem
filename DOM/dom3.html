@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning Dom</title>
+</head>
+<body style="background-color: black; color:azure">
+    <ul class="language">
+        <li>JAVASCRIPT</li>
+    </ul>
+</body>
+  <script>
+        function addlanguage(langname){
+            const li= document.createElement('li')
+            li.innerHTML= `${langname}`
+    //to attach list item in ul class
+    document.querySelector('.language').appendChild(li)
+        }
+
+        addlanguage('PYTHON')
+        addlanguage('typescript')
+
+
+   //optimize way do not traverse full tree easily append
+     function optimize(langname){
+        const li=document.createElement('li')
+        //create text node nd inject the variable
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+     }
+     optimize('goland')
+     
+     //edit a li item
+     //first select
+     const secondLang=document.querySelector("li:nth-child(2)")
+     const newli=document.createElement('li')
+     newli.textContent='mojo'
+     secondLang.replaceWith(newli)
+
+  </script>
+</html>
