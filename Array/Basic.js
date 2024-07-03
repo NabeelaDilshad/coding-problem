@@ -54,3 +54,23 @@ const names = [
   "Evelyn",
   "Ethan",
 ];
+
+for (let i = 0; i < names.length; i++) {
+  if (names[i] == "Henry") {
+    // console.log(names[i]);
+  }
+}
+
+let array = [2, 3, 6, 7, 9, 23]
+
+function reversearray(array) {
+
+  let newarr = [];
+  for (let i = array.length - 1; i >= 0; i--) {
+
+    newarr.push(array[i])
+  }
+  console.log(newarr);
+}
+
+reversearray(array)
