@@ -3,6 +3,7 @@
 
 let arr = [1,2,3,4,5,6 ,7,8,9,10,11,12,13,14];
 
+
 function normalLoop(list){
      let sum = 0;
      for(let i=0; i <list.length; i++){
@@ -51,7 +52,7 @@ function doubleNormal(list){
 
 
 function doublewithMap(list){
-    const r =   list.map((item, index) => {
+    const r = list.map((item, index) => {
       return  item*2
     }  );
     console.log("rseult array", r);
