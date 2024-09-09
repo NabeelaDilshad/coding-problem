@@ -78,4 +78,28 @@ const num3 = [100,200,300,400,500];
 
 
 
-// Question  [10,20,30,40,50]   --> [50,80,80,80,10]
+10,   50
+// Question  [10,20,30,40,50]   --> [50,90,90,90,10]
+
+
+function RorateArraySum(list){
+      let finalarray = []
+      const lastelment = list[list.length - 1];
+      const firstELement = list[0];
+      finalarray[0] = lastelment;
+
+      let sum = 0;
+      let count = 0
+      for(let i = 1; i < list.length - 1; i++){
+              count += 1
+              sum +=list[i];
+      }
+      while(count > 0 ){
+          finalarray.push(sum);
+          count--;
+      }
+      finalarray.push(firstELement)
+      console.log(finalarray)
+}
+
+RorateArraySum([10,20,30,40,50])
