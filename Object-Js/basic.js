@@ -108,3 +108,7 @@ console.log(result2);
 //by using filter
 const output = users.filter((x) => x.age < 30).map((x) => x.firstname)
 // console.log(output);
+
+
+
+

@@ -224,7 +224,7 @@ let ca1 = [3,4,5];   // [1,2,3,4,5]
 
 
   function getPassByEvery(list){
-          const r =  list.every(function ( item , inndex) {
+          const r =  list.every(function (item) {
                   return item.pass == true
             })
             // console.log(r)
@@ -337,3 +337,49 @@ let ca1 = [3,4,5];   // [1,2,3,4,5]
 
         console.log(found);
   
+
+        // flatness of array 
+
+        const ftarr = [1,2,[4,5],[10], [15, [30,40]]];
+
+        // let result = [];
+        // function flatarr(ftarr){
+        //      for (let item of ftarr) {
+        //         if(Array.isArray(item)){
+        //           flatarr(item)
+        //         }
+        //         else{
+        //           result.push(item)
+        //         }
+        //      }
+        // }
+        // flatarr(ftarr)
+        // console.log(result);
+
+        // const fruitses = ['apple', 'banana', 'orange', 'apple', 'orange', 'banana', 'apple'];
+
+        // function getfruitscount(fruits){
+        //     const count = fruits.reduce((acc, item) => {
+        //       acc[item] = (acc[item] || 0) + 1;
+        //       return acc;
+
+        //     }, {})
+        //     console.log(count)
+
+        // }
+        // getfruitscount(fruitses)
+
+
+        const originalObject = {
+          name: 'Nabeela',
+          age: 25,
+          city: 'Aligarh'
+        };
+
+        function convertkeytovalue(originalObject){
+            const result = Object.keys(originalObject).map((item) => {
+              return  { originalObject.item : item }
+            })
+
+        }
+        convertkeytovalue(originalObject)
