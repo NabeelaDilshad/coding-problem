@@ -202,6 +202,15 @@ const items = [
           ]
         }
       ];
+
+       // [
+    //     { name: "Alice", totalIncome: 800, totalExpense: 200 },
+    //     { name: "Bob", totalIncome: 700, totalExpense: 150 },
+    //     { name: "Charlie", totalIncome: 400, totalExpense: 150 }
+    //   ]
+
+
+    
     //   const summary = users.map(user => {
     //     const { income, expense } = user.transactions.reduce(
     //       (totals, transaction) => {
