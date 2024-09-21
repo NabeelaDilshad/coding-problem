@@ -1,0 +1,103 @@
+1. Global Attributes:
+
+These attributes are supported by almost all HTML tags, including the <html> tag.
+	•	accesskey: Defines a shortcut key to activate or focus an element.
+	•	class: Specifies one or more class names for an element (used for CSS styling).
+	•	contenteditable: Indicates if the element’s content is editable.
+	•	data-*: Used to store custom data (e.g., data-id="123").
+	•	dir: Specifies the text direction for the content (left-to-right or right-to-left).
+	•	draggable: Specifies if an element is draggable.
+	•	hidden: Hides the element.
+	•	id: Defines a unique identifier for the element.
+	•	lang: Specifies the language of the element’s content.
+	•	spellcheck: Specifies whether to check spelling and grammar.
+	•	style: Defines inline CSS styles.
+	•	tabindex: Specifies the tabbing order of an element.
+	•	title: Provides additional information about an element (shown as a tooltip).
+	•	translate: Specifies whether the content of the element should be translated or not.
+
+
+    Self-closing tags, also known as void elements, are HTML elements that do not need a closing tag. Here are the most common self-closing tags:
+	1.	<area>: Defines an area inside an image map.
+	2.	<base>: Specifies the base URL for all relative URLs in the document.
+	3.	<br>: Inserts a line break.
+	4.	<col>: Specifies column properties for table columns.
+	5.	<embed>: Embeds external content, like a plugin.
+	6.	<hr>: Inserts a horizontal rule (a line).
+	7.	<img>: Embeds an image.
+	8.	<input>: Defines an input field for forms.
+	9.	<link>: Defines the relationship between the current document and an external resource (often used for stylesheets).
+	10.	<meta>: Provides metadata about the document (like character set, description, or viewport settings).
+	11.	<source>: Specifies multiple media resources for elements like <audio> and <video>.
+	12.	<track>: Specifies text tracks for <video> and <audio>.
+	13.	<wbr>: Suggests a line break opportunity within text.
+
+
+	Formatting elements were designed to display special types of text:
+	<b> - Bold text
+	<strong> - Important text
+	<i> - Italic text
+	<em> - Emphasized text
+	<mark> - Marked text
+	<small> - Smaller text
+	<del> - Deleted text
+	<ins> - Inserted text
+	<sub> - Subscript text
+	<sup> - Superscript text	
+
+	The target attribute can have one of the following values for a tag:
+	_self - Default. Opens the document in the same window/tab as it was clicked
+	_blank - Opens the document in a new window or tab
+	_parent - Opens the document in the parent frame
+	_top - Opens the document in the full body of the window
+
+
+	Block-level elements take up the full width available, stacking one after the other, and typically start on a new line in HTML.
+
+	<div>: Generic block container.
+	<p>: Paragraph.
+	<h1> to <h6>: Headings (H1 being the highest level, H6 the lowest).
+	<section>: Defines a section in a document.
+	<article>: Defines an independent, self-contained content.
+	<aside>: Defines content aside from the main content.
+	<header>: Represents a container for introductory content or navigation links.
+	<footer>: Defines a footer for a document or section.
+	<nav>: Represents a section of navigation links.
+	<main>: Specifies the main content of a document.
+	<address>: Defines contact information.
+	<blockquote>: For long quotations.
+	<ul>, <ol>, <li>: Unordered/Ordered lists and list items.
+	<pre>: Preformatted text.
+	<table>, <thead>, <tbody>, <tfoot>, <tr>, <td>, <th>: Table elements.
+	<figure>: Specifies self-contained content, such as illustrations.
+	<figcaption>: Caption for the <figure> element.
+	<hr>: Horizontal rule.
+	<form>: Represents a section of interactive controls for submitting data.
+	<fieldset>: Groups related elements in a form.
+	<legend>: Title for a <fieldset>.
+	<dl>, <dt>, <dd>: Description list, term, and description.
+	Inline Elements:
+	Inline elements take up only as much width as necessary and flow within the line of text.
+
+	<span>: Generic inline container.
+	<a>: Anchor (link).
+	<img>: Image.
+	<strong>: Bold or important text.
+	<em>: Emphasized text (italic).
+	<b>: Bold text (non-important).
+	<i>: Italic text (non-important).
+	<u>: Underlined text.
+	<abbr>: Abbreviation.
+	<cite>: Citation.
+	<code>: Inline code snippet.
+	<kbd>: Keyboard input.
+	<samp>: Sample output.
+	<var>: Variable.
+	<sup>: Superscript.
+	<sub>: Subscript.
+	<small>: Smaller text.
+	<mark>: Highlighted text.
+	<time>: Represents a specific time.
+	<br>: Line break.
+	<wbr>: Word break opportunity.
+	<input>, <select>, <button>, <label>, <textarea>: Form elements.

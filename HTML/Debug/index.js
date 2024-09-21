@@ -5,7 +5,7 @@ const arr = [1,2,3,1,2,5,6,10,7,6,2,3];
 
 function getCount(arr){
      const mapOfNumber = {};
-    //  debugger;
+     // debugger;
      for(let item of arr){
            if(mapOfNumber[item]){
                 mapOfNumber[item] = mapOfNumber[item] +1
