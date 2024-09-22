@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="c.css">
+</head>
+
+<body>
+     <div class="form_container">
+
+        <div class="news">
+            <p> Registion between 1 to 30 sep is Free</p>
+            <div>
+                <p>UPI payment upto 10% off</p>
+            </div>
+        </div>
+        <p>Lets go !!</p>
+   
+       <h2 class="school_heading" id="heading_id">School Management Registration Form</h2>
+       <form>
+           <label for="name">Full Name:</label><br/>
+           <input type="text" id="name" name="name" required> <br/><br/>
+   
+           <label for="age">Age:</label><br/>
+           <input type="number" id="age" name="age" required min="1" max="100"><br/><br/>
+   
+           <label for="email">Email:</label><br/>
+           <input type="email" id="email" name="email" required><br/><br/>
+   
+           <label for="grade">Grade:</label><br/>
+           <select id="grade" name="grade" required>
+               <option value="">Select Grade</option>
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+               <option value="6">6</option>
+               <option value="7">7</option>
+               <option value="8">8</option>
+               <option value="9">9</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+           </select><br/><br/>
+   
+           <label for="contact">Contact Number:</label><br/>
+           <input type="tel" id="contact" name="contact" required pattern="[0-9]{10}" placeholder="10-digit phone number"><br/><br/>
+   
+           <button type="submit">Register</button>
+       </form>
+     </div>
+     <div class="footer">
+        <!--  footer code -->
+     </div>
+</body>
+
+</html>

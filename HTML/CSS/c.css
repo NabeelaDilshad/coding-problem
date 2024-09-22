@@ -1,0 +1,63 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box !important;
+}
+
+
+form {
+     padding-bottom: 30px;
+     padding-top: 17px;
+     padding-left: 50px;
+}
+
+/* body{
+     background-color: gray;
+} */
+
+/* 
+h2{
+     color: green;
+     font-size: 20px;
+} */
+
+.school_heading{
+    color: green;
+    text-align: center;
+}
+
+/* 
+input[type="text"] {
+     border: 1px solid red;
+} */
+
+
+.form_container{
+    margin: 70px;
+    background-color: darkseagreen;
+}
+
+.news{
+     padding-top: 20px;
+     padding-left: 46px;
+}
+
+
+.news p{
+     color: red
+}
+
+
+.news > p{
+     color: red
+}
+
+
+.electronics_item ~ h1{
+      color: goldenrod
+}
+
+
+.school_heading:hover{
+      font-size:  50px;
+}
