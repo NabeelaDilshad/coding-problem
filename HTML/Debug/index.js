@@ -77,3 +77,34 @@ function reverseNumber(num){
  }
  
  reverseNumber(33564)
+
+
+
+ function isPrime(num){
+      // if number is 1 or  less then 1  then not prime
+      if(num <= 1) {
+          return false
+      }
+       // if number is 2 then 2 is only even prime
+      if(num == 2){
+         return true;
+      }
+      // check from 3 to number 
+      for(let i =3 ; i <=Math.sqrt(num) ; i++){
+           if(num % i == 0 ){
+                return false
+           }
+           return true;
+      }
+   }
+      
+   function findPrimeNumberInrange(start, end){
+       for(let i = start; i <= end; i++){
+            const r = isPrime(i)
+            console.log(r)
+             
+       }
+       console.log("-------- for next function -----------")
+    }
+    
+    findPrimeNumberInrange(1,10)
