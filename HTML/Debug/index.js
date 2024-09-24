@@ -52,3 +52,28 @@ function getSomeReduce(arr){
 
 
 getSomeReduce(arr);
+
+
+
+function reverseNumber(num){
+
+     // const convertString = String(33564);
+     // let reversestr = "";
+     //   for(let i =convertString.length - 1;  i >=0; i--){
+     //       reversestr += convertString[i]
+     //  }
+     //  const convertinto = + reversestr;
+     //  console.log(convertinto, typeof convertinto)
+ 
+     // don't convert into otherdatatype
+ 
+     let final = 0;
+     while(num != 0){
+           const rem = Math.floor(num%10);
+           final = final *10 + rem;
+           num = Math.floor(num/10)
+     }
+     console.log(final)
+ }
+ 
+ reverseNumber(33564)
