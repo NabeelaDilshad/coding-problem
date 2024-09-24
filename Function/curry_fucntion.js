@@ -13,8 +13,20 @@
 //  a()()()();
 
 
-function sum(){
-
+function sum(a) {
+    return function (b) {
+        return function (c) {
+            return function (d) {
+                return function (e) {
+                    console.log(a + b + c + d + e);
+                }
+            }
+        }
+    }
 }
 
-sum(10)(20)(30)(40)(50) // 150
+sum(10)(20)(30)(40)(20)
+
+
+
+
