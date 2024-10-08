@@ -71,22 +71,23 @@ function isPrime(num){
       return true;
    }
    // check from 3 to number 
-   for(let i = 3 ; i <= num ; i++){
+   for(let i = 3 ; i < num ; i++){
         if(num % i == 0 ){
-             return true;
-        }
-        return false;
+             return false;
+        } 
    }
+   return true;
 }
 
-console.log(isPrime(2)) // true
-console.log(isPrime(1)) // prime
-console.log(isPrime(13)) // true
-console.log(isPrime(24)) // false
-console.log(isPrime(3)) // false
-
-
-
+// console.log(isPrime(2)) // true
+// console.log(isPrime(1)) // false
+// console.log(isPrime(13)) // true
+// console.log(isPrime(24)) // false
+// console.log(isPrime(3)) // true
+// console.log(isPrime(17)) // true
+// console.log(isPrime(37)) // true
+// console.log(isPrime(57)) // true
+// console.log(isPrime(55)) // false
 
 
 function findPrimeNumberInrange(start, end){

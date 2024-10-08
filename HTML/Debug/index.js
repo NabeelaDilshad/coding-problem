@@ -73,7 +73,7 @@ function reverseNumber(num){
            final = final *10 + rem;
            num = Math.floor(num/10)
      }
-     console.log(final)
+     // console.log(final)
  }
  
  reverseNumber(33564)
