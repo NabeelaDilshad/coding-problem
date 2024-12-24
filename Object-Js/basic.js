@@ -43,19 +43,24 @@ if (user[fname]) {
 
 
 function getCount(users) {
-    const mapOfResult = {};
+    const mapOfResult = {};    // { 25 : 1,  }
     for (let i = 0; i < users.length; i++) {
-        if (mapOfResult[users[i].age]) {
+        if (mapOfResult[users[i].age]) {   // mapOfResult[25]
             mapOfResult[users[i].age] = mapOfResult[users[i].age] + 1
+            // mapOfResult['22'] = 2
         }
         else {
-            mapOfResult[users[i].age] = 1
+            mapOfResult[users[i].age] = 1   
         }
     }
-    // console.log(mapOfResult)
+    console.log(mapOfResult)
 }
 
-// getCount(users)
+// getCount(users) // { '22': 2, '24': 1, '25': 1, '28': 1, '30': 2 }
+
+
+
+
 
 
 //   const countobject = { count : 1 };
@@ -77,18 +82,18 @@ const users = [
 ];
 
 
-// function firstnamelist(arr) {
-//     let newarr = [];
-//     for (let i = 0; i < arr.length; i++) {
-//         if (arr[i].age < 30) {
-//             newarr.push(arr[i].firstname)
-//         }
-//     }
-//     return newarr;
-// }
+function firstnamelist(arr) {
+    let newarr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].age < 30) {
+            newarr.push(arr[i].firstname)
+        }
+    }
+    return newarr;
+}
 
-// const result = firstnamelist(users);
-// // console.log(result);
+const result = firstnamelist(users);
+// console.log(result);
 
 
 
@@ -98,8 +103,7 @@ const result2 = users.reduce(function (acc, curr) {
         acc = (acc + curr.firstname);
     }
     return acc;
-}, []
-)
+}, [])
 console.log(result2);
 
 
@@ -111,4 +115,51 @@ const output = users.filter((x) => x.age < 30).map((x) => x.firstname)
 
 
 
+//  learn again 22 dec 2024 
 
+const num = { n :10}
+const n = "faiz"
+num[n] = 20     // here we are passing the reference of n which is faiz
+// console.log(num)
+
+//num.200 = 1000     // ❌ which is not allowed
+
+
+
+//  Oject Destucturing 
+
+const product = {
+    id: 101,
+    name: 'Smartphone',
+    price: 25000,
+    specifications: {
+      battery: '4000mAh',
+      processor: 'Octa-core',
+      features: {
+        waterproof: true,
+        camera: {
+          front: '16MP',
+          back: '48MP'
+        }
+      }
+    },
+    stock: 100
+  };
+
+// const name = product.name
+// const price =  product.price
+// const stock =  product.stock
+
+const battery  = product.specifications.battery
+
+// alternatice approach  destructing
+
+const stock = 400;
+const { name  , price , stock: productstock,  specifications : { battery : updatebattery } } = product;
+// console.log(productstock, stock)
+
+// front , 
+
+console.log(updatebattery)
+
+ 

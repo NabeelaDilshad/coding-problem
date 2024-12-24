@@ -383,3 +383,29 @@ let ca1 = [3,4,5];   // [1,2,3,4,5]
 
         }
         convertkeytovalue(originalObject)
+
+
+
+
+function moveZerosToEnd(numbers){
+  let sarr = []
+  let count = 0;
+  for(let i = 0 ; i< numbers.length ; i++){
+         if(numbers[i] !== 0)  {
+               sarr.push(numbers[i])
+         }
+         else{
+              count += 1
+         }
+      }
+   while(count > 0){
+          sarr.push(0)
+          count -= 1
+   }
+  return sarr
+}
+
+
+console.log(moveZerosToEnd([0, 1, 2, 0, 3]));  // [1,2,3,0,0,]
+
+console.log(moveZerosToEnd([0, 10,20,0, 2, 9,0, 3]));  // [10,20,2,9,3,0,0,0]

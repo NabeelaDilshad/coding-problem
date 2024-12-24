@@ -119,3 +119,56 @@ function filterage(users){
 }
 
 // filterage(users);
+
+
+function watchTimer(second){
+    while(second > 0){
+         console.log(second)
+         second = second - 1;
+    }
+}
+watchTimer(5);
+
+function factorial(n) {
+    // let total = 1;
+    //  for(let i = 1 ; i <= n ; i++){
+    //         total  = total  *i
+    //  }
+
+   let total = 1;
+   let i = 1
+   while(i <= n){
+        total  = total  *i
+       i++
+   }
+   console.log(total)
+   
+}
+factorial(5);
+
+
+// reverse number 
+
+function ReverseNumber(n){
+    let finalnumber = 0; 
+    while(n > 0){
+          let  rem = n % 10
+          finalnumber = finalnumber * 10 + rem;
+          n =  Math.floor(n / 10)
+    }
+console.log(finalnumber)
+}
+ReverseNumber(1234)    //  4321
+
+
+// count of digit 
+function countDigit(n){
+let finalcount = 0; 
+    while(n > 0){
+          finalcount += 1
+          n =  Math.floor(n / 10)
+    }
+console.log(finalcount)
+
+}
+countDigit(3435)    // 4
