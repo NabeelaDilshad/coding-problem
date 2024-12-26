@@ -160,6 +160,10 @@ const { name  , price , stock: productstock,  specifications : { battery : updat
 
 // front , 
 
-console.log(updatebattery)
+// console.log(updatebattery)
 
- 
+
+
+// for(let [first , second] of en){
+//     console.log(first)
+// }

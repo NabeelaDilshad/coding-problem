@@ -1,0 +1,82 @@
+                             Static Methods of Number
+These are called on the Number object itself, not on instances of Number.
+
+Number.isFinite(value)
+Determines whether the passed value is a finite number.
+Example: Number.isFinite(10); // true
+
+Number.isInteger(value)
+Checks if the passed value is an integer.
+Example: Number.isInteger(4.5); // false
+
+Number.isNaN(value)
+Determines if the value is NaN (Not-a-Number).
+Example: Number.isNaN(NaN); // true
+
+Number.isSafeInteger(value)
+Checks if the value is a safe integer (within the range of -(2^53 - 1) to 2^53 - 1).
+Example: Number.isSafeInteger(9007199254740991); // true
+
+Number.parseFloat(string)
+Parses a string argument and returns a floating-point number.
+Example: Number.parseFloat("10.5"); // 10.5
+
+Number.parseInt(string, radix)
+Parses a string argument and returns an integer of the specified radix.
+Example: Number.parseInt("10", 2); // 2
+
+Number.EPSILON
+The smallest difference between two representable numbers.
+Example: Number.EPSILON; // 2.220446049250313e-16
+
+Number.MAX_SAFE_INTEGER
+The maximum safe integer in JavaScript (2^53 - 1).
+Example: Number.MAX_SAFE_INTEGER; // 9007199254740991
+
+Number.MIN_SAFE_INTEGER
+The minimum safe integer in JavaScript (-(2^53 - 1)).
+Example: Number.MIN_SAFE_INTEGER; // -9007199254740991
+
+Number.MAX_VALUE
+The largest positive finite number.
+Example: Number.MAX_VALUE; // 1.7976931348623157e+308
+
+Number.MIN_VALUE
+The smallest positive number greater than 0.
+Example: Number.MIN_VALUE; // 5e-324
+
+Number.NaN
+Special value representing "Not-a-Number".
+Example: Number.NaN; // NaN
+
+Number.POSITIVE_INFINITY
+Represents positive infinity.
+Example: Number.POSITIVE_INFINITY; // Infinity
+
+Number.NEGATIVE_INFINITY
+Represents negative infinity.
+Example: Number.NEGATIVE_INFINITY; // -Infinity
+
+
+
+                         Instance Methods of Number
+These are methods that can be called on Number objects (or number literals if wrapped as an object).
+toExponential(fractionDigits)
+Returns a string representing the number in exponential notation.
+Example: (12345).toExponential(2); // "1.23e+4"
+
+toFixed(fractionDigits)
+Formats a number with a fixed number of digits after the decimal point.
+Example: (123.456).toFixed(2); // "123.46"
+
+toPrecision(precision)
+Formats a number to a specified length.
+Example: (123.456).toPrecision(4); // "123.5"
+
+toString(radix)
+Converts a number to a string, optionally in a specified base (radix).
+Example: (255).toString(16); // "ff"
+
+valueOf()
+Returns the primitive value of the number.
+Example: (123).valueOf(); // 123

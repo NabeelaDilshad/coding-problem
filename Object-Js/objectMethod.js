@@ -52,6 +52,23 @@ const product = {
 
   // Object.is()
   
+  // object create , create new object and set prototype passing  object
+  const person = {
+    isHuman: false,
+    printIntroduction: function () {
+      console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+    },
+  };
+  
+  const me = Object.create(person);
+  
+  
+  me.name = 'Matthew'; // "name" is a property set on "me", but not on "person"
+  me.isHuman = true; // Inherited properties can be overwritten
+  
+  console.log(me)
+  me.printIntroduction();
+
 
 
   const mostExpensive = (obj) => {
@@ -69,3 +86,47 @@ const product = {
     "Gemstone Earrings": 180,
     "Diamond Ring": 3500
   }) // "The most expensive one is the Diamond Ring"
+
+
+
+  const inventory = [
+    { name: "asparagus", type: "vegetables", quantity: 5 },
+    { name: "bananas", type: "fruit", quantity: 0 },
+    { name: "goat", type: "meat", quantity: 23 },
+    { name: "cherries", type: "fruit", quantity: 5 },
+    { name: "fish", type: "meat", quantity: 22 },
+  ];
+  
+  /* Result is:
+  {
+    vegetables: [
+      { name: 'asparagus', type: 'vegetables', quantity: 5 },
+    ],
+    fruit: [
+      { name: "bananas", type: "fruit", quantity: 0 },
+      { name: "cherries", type: "fruit", quantity: 5 }
+    ],
+    meat: [
+      { name: "goat", type: "meat", quantity: 23 },
+      { name: "fish", type: "meat", quantity: 22 }
+    ]
+  }
+  */
+  function  groupby(vlist) {
+        const groupResult = {};
+        for( item of vlist){
+               const type = item.type
+               if(!groupResult[type]){
+                     groupResult[type] = []    //  { "vegetables" : [] , fruits:[]}
+               }
+              groupResult[type].push(item)
+            
+        }
+        console.log(groupResult)
+  }
+
+
+// const result = Object.groupBy(inventory, ({ type }) => type);
+// const result = Object.groupBy(inventory,  (item) => item.type);
+  
+  groupby(inventory)
