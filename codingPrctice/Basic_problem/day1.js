@@ -1,10 +1,10 @@
 
 let str = "faizuddin";   // nidduziaf
 const reverseString = str => {
-      let reversestr = "";
-      for(let i = str.length - 1;  i >=0; i--){
-          reversestr += str[i]
-      }
+    let reversestr = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversestr += str[i]
+    }
     //   console.log(reversestr)
 
     //   second approach
@@ -22,7 +22,7 @@ reverseString(str);
 
 
 //  reverse the number 
-function reverseNumber(num){
+function reverseNumber(num) {
 
     // const convertString = String(33564);
     // let reversestr = "";
@@ -34,25 +34,25 @@ function reverseNumber(num){
 
     // don't convert into otherdatatype
     let final = 0;
-    while(num != 0){
-          const rem = Math.floor(num%10);
-          final = final *10 + rem;
-          num = Math.floor(num/10)
+    while (num != 0) {
+        const rem = Math.floor(num % 10);
+        final = final * 10 + rem;
+        num = Math.floor(num / 10)
     }
     // console.log(final)
 }
 
-reverseNumber(33564) 
+reverseNumber(33564)
 
 
-function evenNumberSum(num){
+function evenNumberSum(num) {
     let final = 0;
-    while(num != 0){
-          const rem = Math.floor(num%10);
-          if(rem % 2 == 0){
+    while (num != 0) {
+        const rem = Math.floor(num % 10);
+        if (rem % 2 == 0) {
             final += rem;
-          }
-          num = Math.floor(num/10)
+        }
+        num = Math.floor(num / 10)
     }
     // console.log(final)
 }
@@ -61,6 +61,30 @@ evenNumberSum(323564)  // 12
 
 
 
+<<<<<<< HEAD
+function isPrime(num) {
+    // write your code her
+
+
+}
+
+console.log(isPrime(2)) // true
+console.log(isPrime(1)) // prime
+console.log(isPrime(13)) // true
+console.log(isPrime(8)) // false
+
+
+
+
+
+function findPrimeNumberInrange(num) {
+    // write your code here 
+}
+
+console.log(findPrimeNumberInrange(1, 10))
+console.log(findPrimeNumberInrange(10, 30))
+console.log(findPrimeNumberInrange(20, 60))
+=======
 function isPrime(num){
    // if number is 1 or  less then 1  then not prime
    if(num <= 1) {
@@ -102,3 +126,4 @@ function findPrimeNumberInrange(start, end){
  findPrimeNumberInrange(1,10)
 findPrimeNumberInrange(10,30) 
 findPrimeNumberInrange(20,60)
+>>>>>>> 8f36b5b6aa9f9505639e34dccf8f6a05d48f7199
