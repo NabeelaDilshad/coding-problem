@@ -16,18 +16,18 @@
   // var scope , if declare inside function then function scope 
   // if declare outside function then global scope
   
-//   var number = 100;
-//   function getNumber(){
-//         var number2 = 50;
-//         if(number2 == 50){
-//             var number2 = 200;
-//             console.log(number2)   // 200
-//         }
-//         console.log(number2)  // 200
-//   }
-//   console.log(number) // 100
+  var number = 100;
+  function getNumber(){
+        var number2 = 50;
+        if(number2 == 50){
+            var number2 = 200;
+            console.log(number2)   // 200
+        }
+        console.log(number2)  // 200
+  }
+  console.log(number) // 100
 
-//   getNumber();
+  getNumber();
 
 
    // let and const 
