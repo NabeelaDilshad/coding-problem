@@ -116,7 +116,7 @@ console.log("````` memorization technique `````````````")
 // memorization technique 
 // Memoization is an optimization technique to cache results of expensive function calls.
 
-function getProfile(username){
+function getProfile(username){  // 'Nabeela'
  // asume this data comming from DB call
     const studentlist = [
         {
@@ -153,15 +153,20 @@ function getProfile(username){
 
 function getProfileCheche(fun){
     let studentcheche = {};
-     return function(...args){
-           const studentname = args[0]
+     return function(...args){                  // ['Nabeela']
+           const studentname = args[0]         //  'Nabeela'
            if(studentcheche[studentname]){
                console.log(`calling from cheche`)
               return studentcheche[studentname]
            }
            else{
                 console.log(`calling from DB`)
-                const result =  fun(studentname)
+                const result =  fun(studentname)    /**  {
+                                                            name :"nabeela",
+                                                            rollno:21478368743,
+                                                            course : "BTECH",
+                                                            year : 2020-2025
+                                                     }*/
                 studentcheche[studentname] = result
                 return result;
            }
