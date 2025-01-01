@@ -186,3 +186,65 @@ profilecall("mack")
 
 
 
+
+
+console.log("-------------------------- Settimeout --------------------------")
+
+// console.log("start")
+// setTimeout(function(){
+//      console.log("second")
+// },1000)
+// console.log("third")
+
+
+// question  ,1 2,3,4,5,
+
+
+/** 
+        function a(){
+        }
+
+        function b(){
+        }
+        
+        b(a)   // a is callback function and b is high order function
+
+*/
+
+
+// function getCounter(){
+//   for( var i =1; i <= 5 ; i++){
+//       setTimeout(() => {
+//          console.log(i);
+//       }, 1000*i)
+//   }
+// }
+
+// getCounter();
+ 
+
+// function getCounterLet(){
+//   for( let i =1; i <= 5 ; i++){
+//       setTimeout(() => {
+//          console.log(i);
+//       }, 1000*i)
+//   }
+// }
+
+// getCounterLet();
+
+
+
+function getCounter(){
+  var i
+  for( i =1; i <= 5 ; i++){
+      function newfunction(index){
+          setTimeout(() => {
+              console.log(index);
+          }, 1000*index)
+      }
+      newfunction(i);
+  }
+}
+
+getCounter();
