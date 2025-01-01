@@ -30,6 +30,154 @@ var s  =   r()
 s()
 
 // or
-// a()()()
+a()()()
+
+
+// uses of closure
+
+// 1. Module Design Pattern
+// The module design pattern helps organize code into self-contained units with private and public members.
+
+const CounterModule = (function () {
+  let count = 0;   // Private variable
+
+  return {
+    increment: function () {
+      count++;
+      console.log(`Count: ${count}`);
+    },
+    decrement: function () {
+      count--;
+      console.log(`Count: ${count}`);
+    },
+    getCount: function () {
+      return count;
+    },
+  };
+})();
+
+CounterModule.increment(); // Count: 1
+CounterModule.increment(); // Count: 2
+CounterModule.decrement(); // Count: 1
+console.log(CounterModule.getCount()); // 1
+
+
+
+
+
+//  calculation.add(10).multy(2).minus(10).add(5)    // 15
+const calculation = (function(){
+    let count = 0;
+    return {
+         add: function (n){
+             count += n;
+             return this;
+         },
+         multy: function (n){
+            count *= n;
+            return this;
+         },
+         minus: function(n){
+            count -= n;
+            return this;
+         },
+         gettotal : function(){
+             return count;
+         }
+    }
+})()
+
+
+
+
+const result = calculation.add(10).multy(2).minus(10).add(5).gettotal() // 15
+// console.log(result)
+
+
+
+
+
+// 2. function curring 
+function getA(x){
+     return function getB(y){
+           return function getC(z){
+                 return x+y+z;
+           }
+     }
+}
+
+const finaltotal = getA(10)(5)(2);
+console.log(finaltotal)
+
+
+
+
+console.log("````` memorization technique `````````````")
+// memorization technique 
+// Memoization is an optimization technique to cache results of expensive function calls.
+
+function getProfile(username){
+ // asume this data comming from DB call
+    const studentlist = [
+        {
+            name :"nabeela",
+            rollno:21478368743,
+            course : "BTECH",
+            year : 2020-2025
+       },
+       {
+        name :"mack",
+        rollno:21478354343,
+        course : "BTECH",
+        year : 2020-2025
+       },
+       {
+        name :"john",
+        rollno:214432478368743,
+        course : "BTECH",
+        year : 2020-2025
+       }
+    ]
+
+    if(username === "Nabeela"){
+        return studentlist[0];
+    }
+    if( username === "mack"){
+          return studentlist[1]
+    }
+    if( username === "john"){
+        return studentlist[2]
+    }
+}
+
+
+function getProfileCheche(fun){
+    let studentcheche = {};
+     return function(...args){
+           const studentname = args[0]
+           if(studentcheche[studentname]){
+               console.log(`calling from cheche`)
+              return studentcheche[studentname]
+           }
+           else{
+                console.log(`calling from DB`)
+                const result =  fun(studentname)
+                studentcheche[studentname] = result
+                return result;
+           }
+     }
+}
+
+const profilecall = getProfileCheche(getProfile);
+profilecall("Nabeela")
+profilecall("Nabeela")
+
+
+profilecall("mack")
+profilecall("mack")
+profilecall("mack")
+
+
+
 
 
