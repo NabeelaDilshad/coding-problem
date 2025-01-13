@@ -1,6 +1,6 @@
 
 
-console.log(a) 
+// console.log(a) 
 var aa = 10;
 
 function getuser(){
@@ -17,7 +17,6 @@ function getuser(){
                 console.log("i am from " + address, a, username)
             }
             thirdfunction();
-
      }
      otheruser()
 }

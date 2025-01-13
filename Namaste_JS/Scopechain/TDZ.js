@@ -31,7 +31,7 @@
 
 
    // let and const 
-   let number = 100;
+//    let number = 100;
    function getNumber(){
          let number2 = 50;
          if(number2 == 50){
@@ -47,3 +47,7 @@
    // var bht kam use 
    // let prefare 
    // const  discount = 20%
+
+
+
+    

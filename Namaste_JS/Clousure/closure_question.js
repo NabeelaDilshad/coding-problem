@@ -36,7 +36,7 @@ function outerFunc() {
 
 
 
-    const arr = [];
+   const arr = [];
    for (var i = 0; i < 5; i++) {
     arr.push(() => console.log(i));
     }

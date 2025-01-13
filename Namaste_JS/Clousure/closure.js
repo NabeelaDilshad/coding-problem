@@ -38,6 +38,7 @@ a()()()
 // 1. Module Design Pattern
 // The module design pattern helps organize code into self-contained units with private and public members.
 
+// IFFI function , once we create it will execude
 const CounterModule = (function () {
   let count = 0;   // Private variable
 
@@ -86,9 +87,6 @@ const calculation = (function(){
          }
     }
 })()
-
-
-
 
 const result = calculation.add(10).multy(2).minus(10).add(5).gettotal() // 15
 // console.log(result)
@@ -212,26 +210,26 @@ console.log("-------------------------- Settimeout --------------------------")
 */
 
 
-// function getCounter(){
-//   for( var i =1; i <= 5 ; i++){
-//       setTimeout(() => {
-//          console.log(i);
-//       }, 1000*i)
-//   }
-// }
+function getCounter(){
+  for( var i =1; i <= 5 ; i++){
+      setTimeout(() => {
+         console.log(i);
+      }, 1000*i)
+  }
+}
 
-// getCounter();
+getCounter();
  
 
-// function getCounterLet(){
-//   for( let i =1; i <= 5 ; i++){
-//       setTimeout(() => {
-//          console.log(i);
-//       }, 1000*i)
-//   }
-// }
+function getCounterLet(){
+  for( let i =1; i <= 5 ; i++){
+      setTimeout(() => {
+         console.log(i);
+      }, 1000*i)
+  }
+}
 
-// getCounterLet();
+getCounterLet();
 
 
 
