@@ -11,6 +11,21 @@ getPromise().then((data)=>{
    console.log(data)
 })
 
+const p = new Promise((resolve, reject)=>{
+  setTimeout(() => {
+    reject({ name: 'faiz', address:"kushinagar"})
+  }, 2000)
+})
+
+p.then((data) => {
+console.log(data)
+}).catch((error) => console.error(error))
+
+// console.log(p)
+// setTimeout(()=>{
+//   console.log(p)
+// }, 5000)
+
 
 // Simulated list of items
 const items = [
@@ -78,11 +93,45 @@ const items = [
     });
   }
   
-  // Execution of steps with Promises
-  addToCart(1)
-    .then(cart => calculateTotal(cart))
-    .then(total => proceedToPayment(total))
-    .then(paymentStatus => generateReceipt(paymentStatus))
-    .then(finalStatus => console.log(finalStatus))
-    .catch(err => console.error(err));
+ 
   
+   // Execution of steps with Promises
+  addToCart(1).then( data => {
+     return calculateTotal(data)
+  })
+  .then((total)  => {
+     return proceedToPayment(total)
+  }).then((paymentStatus) => {
+      return generateReceipt(paymentStatus)
+  }).then((finalStatus) => {
+      console.log(finalStatus)
+  }).catch((error) => {
+     console.log(error)
+  })
+
+  // or 
+  // addToCart(1)
+  //   .then(cart => calculateTotal(cart))
+  //   .then(total => proceedToPayment(total))
+  //   .then(paymentStatus => generateReceipt(paymentStatus))
+  //   .then(finalStatus => console.log(finalStatus))
+  //   .catch(err => console.error(err));
+
+
+
+
+    // question
+ addToCart(1).then( data => {
+    return calculateTotal(data)
+ })
+ .then((total)  => {
+    return proceedToPayment(total)
+ }).then((paymentStatus) => {
+     return generateReceipt(paymentStatus)
+ }).then((finalStatus) => {
+     console.log(finalStatus)
+ }).catch((error) => {
+    console.log(error)
+ }).then(( data) =>{
+   console.log("it will always excute because .catch return a error which is a string , string is a resolve promise  !!!")
+ })

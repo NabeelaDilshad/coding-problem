@@ -122,4 +122,20 @@ const pipe = (obj) =>{
 
 
 const r = pipe(obj)(1,1,1)
-console.log(r)
+// console.log(r)
+
+
+const arr = [ 3,5,7,8,1,4,12];
+
+function rorateArray(arr, d){
+    const n = arr.length;
+    d = d %n;
+    for(let i = d; i < n; i++){
+           arr[i-d] = arr[i]
+    }
+    console.log(arr)
+}
+
+rorateArray(arr, 2)
+rorateArray(arr, 3)
+rorateArray(arr, 9)
