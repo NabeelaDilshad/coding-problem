@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML</title>
     <link rel="stylesheet" href="main.css">
 </head>
-<body>  
+<body> 
 
-      <h1 id="heading" class="headingClass" data-id="123" hidden> This is heading one</h1>
-      <button disabled hidden> Add me </button>
+      <h1 id="heading" class="headingClass" data-id="123" draggable="true"> This is heading one</h1>
+
+      <button disabled> Add me </button>
       <p>this is for <em>peragraf</em></p>
 
-      <img src="../../img.png" alt="image is not loading"/> 
+      <img src="../../img.png" alt="image is not loading"/>
      
-       <div class="menus">
-            <a href="https://dribbble.com/session/new">Regsistation</a>
+       <nav class="menus">
+            <a href="https://dribbble.com/session/new" target="_self">Regsistation</a>
             <a href="https://www.google.com/" target="_blank">login</a>
             <a href="">dashboard</a>
             <a href="">result</a>
             <a href=""> logout</a>
-       </div>    
+       </nav>    
 
        <hr style="margin-top: 30px;"/>
         
-       <!-- <table>
+       <table>
         <tr>
           <th>Company</th>
           <th>Contact</th>
@@ -43,7 +44,7 @@
           <td>Germany</td>
           <td>Germany</td>
         </tr>
-      </table> -->
+      </table>
       
 
       <!-- Unordered list -->
@@ -66,6 +67,143 @@
 
       <input  type="text" placeholder="enter your name">
       <input  type="password" placeholder="enter your password">
+
+      <br/>
+
+
+      <hr/>
+    <h1>Text Formatting Example</h1>
+    <p><b>This text is bold.</b></p>
+    <p><strong>This text is important and bold.</strong></p>
+    <p><i>This text is italicized.</i></p>
+    <p><em>This text is emphasized and italicized.</em></p>
+    <p><mark>This text is highlighted (marked).</mark></p>
+    <p><small>This is smaller text.</small></p>
+    <p><del>This text is shown as deleted (strikethrough).</del></p>
+    <p><ins>This text is shown as inserted (underlined).</ins></p>
+    <p>Water is written as H<sub>2</sub>O using subscript.</p>
+    <p>To denote a power, use superscript: 2<sup>3</sup> = 8.</p>
+
+    <hr style="margin-top: 40px;"/>
+    <h1>Block Level Element Example</h1>
+     <!-- Block Elements -->
+     <div>
+      <section>
+          <h2>Section Example</h2>
+          <article>
+              <h3>Article Example</h3>
+              <p>This is an independent, self-contained article.</p>
+          </article>
+          <aside>
+              <p>This is an aside, containing additional or related information.</p>
+          </aside>
+      </section>
+
+      <header>
+          <h2>Header Example</h2>
+          <nav>
+              <ul>
+                  <li><a href="#section1">Section 1</a></li>
+                  <li><a href="#section2">Section 2</a></li>
+                  <li><a href="#section3">Section 3</a></li>
+              </ul>
+          </nav>
+      </header>
+
+      <main>
+          <h2>Main Content</h2>
+          <p>The main content of the document is displayed here.</p>
+      </main>
+
+      <footer>
+          <p>&copy; 2025 Example Footer Content</p>
+      </footer>
+  </div>
+
+  <!-- Address -->
+  <address>
+      Contact us at: <a href="mailto:info@example.com">info@example.com</a>.
+  </address>
+
+  <!-- Blockquote -->
+  <blockquote>
+      "This is a long quotation block used for citing quotes or references." - Author
+  </blockquote>
+
+  <!-- Lists -->
+  <section>
+      <h2>Lists</h2>
+      <ul>
+          <li>Unordered List Item 1</li>
+          <li>Unordered List Item 2</li>
+      </ul>
+      <ol>
+          <li>Ordered List Item 1</li>
+          <li>Ordered List Item 2</li>
+      </ol>
+  </section>
+
+  <!-- Preformatted Text -->
+  <pre>
+      function example() {
+          console.log("Preformatted code block example.");
+      }
+  </pre>
+
+  <!-- Table -->
+  <section>
+      <h2>Table Example</h2>
+      <table border="1">
+          <thead>
+              <tr>
+                  <th>Header 1</th>
+                  <th>Header 2</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Row 1, Col 1</td>
+                  <td>Row 1, Col 2</td>
+              </tr>
+              <tr>
+                  <td>Row 2, Col 1</td>
+                  <td>Row 2, Col 2</td>
+              </tr>
+          </tbody>
+          <tfoot>
+              <tr>
+                  <td colspan="2">Footer Row</td>
+              </tr>
+          </tfoot>
+      </table>
+  </section>
+
+  <!-- Figure -->
+  <figure>
+      <img src="example.jpg" alt="Example Image" style="width:200px;">
+      <figcaption>Figure: Example Image Caption</figcaption>
+  </figure>
+
+  
+  <!-- Form -->
+  <form>
+      <fieldset>
+          <legend>Form Example</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name"><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br><br>
+          <input type="submit" value="Submit">
+      </fieldset>
+  </form>
+
+  <!-- Description List -->
+  <dl>
+      <dt>HTML</dt>
+      <dd>A markup language for creating web pages.</dd>
+      <dt>CSS</dt>
+      <dd>A style sheet language for styling HTML documents.</dd>
+  </dl>
 
 </body>
 </html>
