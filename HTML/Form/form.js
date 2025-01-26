@@ -88,5 +88,8 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(formData);
 
         // Optionally, you can do further actions like sending the data to a server using AJAX
+
+        // for ref
+        // https://github.com/hiteshchoudhary/js-hindi-youtube/blob/main/06_dom/three.html
     });
 });
