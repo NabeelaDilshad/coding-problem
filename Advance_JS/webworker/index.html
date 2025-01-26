@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Worker</title>
+</head>
+<body>
+    <h1>Web Worker Example</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number" />
+    <button id="startWorker">Find Primes</button>
+    <p id="result"></p>
+    <script>
+        // Check if the browser supports Web Workers
+        if (window.Worker) {
+            const worker = new Worker('web.js'); // Initialize the worker
+
+            // Start Worker
+            document.getElementById('startWorker').addEventListener('click', () => {
+                const num = parseInt(document.getElementById('numberInput').value, 10);
+                if (!isNaN(num)) {
+                    document.getElementById('result').textContent = 'Calculating...';
+
+                    // Send data to the worker
+                    worker.postMessage({ num });
+                }
+            });
+
+            // Receive messages from the worker
+            worker.onmessage = function (e) {
+                const primes = e.data.primes;
+                document.getElementById('result').textContent = `Primes: ${primes.join(', ')}`;
+            };
+
+            // Handle errors
+            worker.onerror = function (error) {
+                console.error('Worker error:', error.message);
+            };
+        } else {
+            alert('Web Workers are not supported in your browser.');
+        }
+
+    </script>
+</body>
+</html>

@@ -7,14 +7,18 @@ const obj1 = {
 };
 
 
-// const obj2 = obj1;    // ❌ this point to same references
-// obj1.name = "john"; 
+const obj2 = obj1;    // ❌ this point to same references
+obj1.name = "john"; 
+
+// console.log(obj2)
+
 
 // make this shallow copy 🥰
 
 const obj3 =  { ... obj1 } 
 obj1.name = "john";
 
+console.log(obj3)
 
 const obj4 =  Object.assign({},obj1)
 obj1.name = "john";
@@ -30,6 +34,8 @@ obj1.name = "john";
 
 // deep copy
  const deepobj =  JSON.parse(JSON.stringify(obj1))
+
+const deepstrcutrclone = structuredClone(obj1)
  obj1.address.pincode = 232323;
 //  console.log(deepobj);
 
@@ -62,5 +68,23 @@ const deeparr =  JSON.parse(JSON.stringify(arr1));
 //  or new method
 // const deeparr =  structuredClone(arr1);
 arr1[4][0]= 1000;
-console.log(deeparr)
+// console.log(deeparr)
 
+
+
+// issue with json parse and json stringify
+const deepobject = {
+     name :"faiz",
+     age : null,
+     address : {},
+     userdetail : function(){}
+}
+
+const deepc = JSON.parse(JSON.stringify(deepobject));
+console.log(deepc)
+
+
+
+// Use  ...spread, slice(), or Array.from() for simplicity and performance.
+// Avoid JSON.parse(JSON.stringify()) unless a deep copy is needed.
+// Use loops (for, map, reduce) only if transformation is required during the copy.

@@ -172,3 +172,30 @@ console.log(finalcount)
 
 }
 countDigit(3435)    // 4
+
+
+
+
+// for and in loop
+
+
+console.log(`------------- for and in loop --------------------`)
+
+const studentsrolls = [ 101, 102, 103, 104, 105]
+
+for(let item of studentsrolls){  
+    //  console.log(item)
+}
+
+for(let item in studentsrolls){
+    // console.log(item)
+}
+
+
+
+const objectrools = { "adam": 101 , "jack":102, "mic": 103, "john": 104, "jim": 105}
+
+for(let item in objectrools){
+   console.log(item)
+}
+

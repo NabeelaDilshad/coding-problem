@@ -1,0 +1,93 @@
+
+# Basic Examples
+# Key-value pairs
+name: John Doe
+age: 30
+
+# List
+fruits:
+  - apple
+  - banana
+  - cherry
+
+# Scalars
+message: "Hello, YAML!"
+count: 123
+is_active: true
+value: null
+
+# Intermediate Examples
+
+# Nested Structures
+user:
+  name: Alice
+  contact:
+    email: alice@example.com
+    phone: 123-456-7890
+
+# Anchor and Alias
+default_settings: &defaults
+  timeout: 30
+  retries: 3
+
+user_settings:
+  <<: *defaults
+  timeout: 60
+
+# Multiline Strings
+description_block: |
+  This is a long text
+  that spans multiple lines.
+
+description_folded: >
+  This is a long text
+  that will be collapsed into
+  a single line.
+
+# Flow Style
+colors: [red, green, blue]
+user: {name: John, age: 30}
+
+---
+
+# Advanced Examples
+
+# Custom Tags
+!custom_tag
+data: example
+
+# Environment Variables (example for processors that support it)
+password: ${DB_PASSWORD}
+
+# Merging Keys
+base: &base
+  retries: 3
+  timeout: 100
+
+config:
+  <<: *base
+  timeout: 200
+
+# Complex Data Structures
+services:
+  - name: web
+    image: nginx:latest
+    ports:
+      - 80:80
+  - name: database
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
+
+"""
+
+# Writing all examples to a file
+examples_file_path = "/mnt/data/YAML_All_Examples.yaml"
+with open(examples_file_path, "w") as file:
+    file.write(yaml_examples_content)
+
+examples_file_path
+
+
+

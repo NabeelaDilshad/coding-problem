@@ -93,13 +93,29 @@ function getsome(arr){
            acc = acc+ item;
            return acc;
     }, 0)
-    console.log(sum);
+    // console.log(sum);
 
 }
 
 getsome(numbersum)
 
 
-//  
 
+
+//  array destructing ------------------------------------------
+
+const userlists = [
+  { name: "Edward", value: 21 },
+  { name: "Sharpe", value: 37 },
+  { name: "And", value: 45 },
+  { name: "The", value: -12 },
+  { name: "Magnetic", value: 13 },
+  { name: "Zeros", value: 37 },
+];
   
+const firstuser  = userlists[0]
+const seconduser = userlists[1]
+const restofuser = userlists.slice(2)
+
+const [ first, second, ...rest ] = userlists
+// const [,,third, ...rest ] = userlists

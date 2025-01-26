@@ -9,8 +9,50 @@ document.addEventListener('DOMContentLoaded', function () {
         // Prevent default form submission
         event.preventDefault();
 
-        // Collect values from the form elements
-        const fullName = document.getElementById('full-name').value;
+
+         /**
+          * by get by Id
+          * const fullName = document.getElementById("full-name")
+          * console.log(fullName.value)
+          * 
+          * return as Object
+         */
+         
+        /**
+         * by get by class name
+         * const fullName = document.getElementsByClassName("fullnameclass")
+           console.log(Array.from(fullName)[0].value) 
+           
+           return as HTMLCollection
+         */
+        
+
+        /**
+         * by get by name
+          * const fullName = document.getElementsByName("fullName")
+            console.log(fullName[0].value)
+            return as Nodelist
+         */
+
+            
+        /**
+         * const fullName = document.querySelector(".fullnameclass")
+           console.log(fullName)
+
+           return first match 
+         */
+
+
+        /**
+         * const fullName = document.querySelectorAll(".fullnameclass")
+           console.log(fullName)
+
+           return All match as a NodeList
+         */
+        
+
+        
+        const fullName = document.getElementById("full-name")
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         const gender = document.querySelector('input[name="gender"]:checked').value;
@@ -39,12 +81,15 @@ document.addEventListener('DOMContentLoaded', function () {
             phone,
             comments,
             resume,
-            termsAccepted
+            termsAccepted,
         };
 
         // Display the form data in the console (you can send this data to a server if needed)
         console.log(formData);
 
         // Optionally, you can do further actions like sending the data to a server using AJAX
+
+        // for ref
+        // https://github.com/hiteshchoudhary/js-hindi-youtube/blob/main/06_dom/three.html
     });
 });

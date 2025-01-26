@@ -1,14 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
 
-       <h1> This is for debug</h1>
-       <script src="index.js"></script>
-
-</body>
+        <h1> This is for debug</h1>
+        <script src="index.js"></script>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Dynamic List with CRUD</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 20px;
+                }
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                }
+                li {
+                    margin: 5px 0;
+                    padding: 5px;
+                    border: 1px solid #ccc;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                button {
+                    margin-left: 5px;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Manage Your List</h1>
+        
+            <form id="itemForm">
+                <input type="text" id="itemInput" placeholder="Enter item" required>
+                <button type="submit">Add Item</button>
+            </form>
+        
+            <ul id="itemList"></ul>
+        
+            <script>
+                const form = document.getElementById('itemForm');
+                const input = document.getElementById('itemInput');
+                const itemList = document.getElementById('itemList');
+        
+                let editMode = null;
+        
+                // Add item to the list
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const value = input.value.trim();
+        
+                    if (!value) return;
+        
+                    if (editMode) {
+                        editMode.querySelector('.text').textContent = value;
+                        editMode = null;
+                        form.reset();
+                        return;
+                    }
+        
+                    const li = document.createElement('li');
+        
+                    const textSpan = document.createElement('span');
+                    textSpan.textContent = value;
+                    textSpan.classList.add('text');
+        
+                    const editButton = document.createElement('button');
+                    editButton.textContent = 'Edit';
+                    editButton.addEventListener('click', () => {
+                        input.value = textSpan.textContent;
+                        editMode = li;
+                    });
+        
+                    const deleteButton = document.createElement('button');
+                    deleteButton.textContent = 'Delete';
+                    deleteButton.addEventListener('click', () => li.remove());
+        
+                    li.appendChild(textSpan);
+                    li.appendChild(editButton);
+                    li.appendChild(deleteButton);
+        
+                    itemList.appendChild(li);
+                    form.reset();
+                });
+            </script>
+        </body>
+        </html>
+        
+    </body>
 </html>

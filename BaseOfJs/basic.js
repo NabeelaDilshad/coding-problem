@@ -18,7 +18,7 @@ console.log(res);
 //      }
 // }
 // const r = CallThePolice("mack", 34);
-// console.log(r)
+// console.log(r)  // { name: 'mack' ,   age: 34 }
 
 
 
