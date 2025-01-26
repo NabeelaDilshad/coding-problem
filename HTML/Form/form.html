@@ -9,12 +9,13 @@
     <h2>Registration Form</h2>
     <form action="/submit_registration" method="post">
         <!-- Full Name -->
-        <label for="full-name">Full Name:</label><br>
-        <input type="text" id="full-name" name="fullName" placeholder="Enter your full name" required><br><br>
+        <label for="full-name">Full Name:</label>
+        <br>
+        <input type="text" class="fullnameclass" id="full-name" name="fullName" placeholder="Enter your full name" required><br><br>
 
         <!-- Email -->
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+        <input type="email" class="fullnameclass" id="email" name="email" placeholder="Enter your email" required><br><br>
 
         <!-- Password -->
         <label for="password">Password:</label><br>
@@ -32,14 +33,17 @@
         <input type="number" id="age" name="age" min="18" max="100" required><br><br>
 
         <!-- Country (Select dropdown) -->
-        <label for="country">Country:</label><br>
+        <label for="country">Country:</label>
+        <br/>
         <select id="country" name="country" required>
             <option value="">Select your country</option>
             <option value="india">Indian</option>
             <option value="usa">Ameria</option>
             <option value="uk">UK</option>
             <option value="canada">Canada</option>
-        </select><br><br>
+        </select>
+        <br/>
+        <br/>
 
         <!-- Languages Known (Checkboxes) -->
         <label>Languages Known:</label><br>
@@ -56,7 +60,7 @@
 
         <!-- Comments/Additional Info (Textarea) -->
         <label for="comments">Comments or Additional Info:</label><br>
-        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Add any comments or additional information"></textarea><br><br>
+        <textarea id="comments" name="comments" rows="5" cols="50" placeholder="Add any comments or additional information"></textarea><br><br>
 
         <!-- File Upload -->
         <label for="resume">Upload Resume:</label><br>
@@ -67,8 +71,8 @@
         <label for="terms">I accept the <a href="#">terms and conditions</a></label><br><br>
 
         <!-- Submit Button -->
-        <button type="submit"> Sumbit</button>
         <button type="reset"> Reset</button>
+        <button type="submit"> Sumbit</button>
     </form>
     <script src="form.js"></script>
 </body>
