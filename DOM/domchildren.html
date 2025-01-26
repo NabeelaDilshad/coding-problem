@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Element children</title>
+</head>
+<body>
+
+    <div  id="week" class="week" style="background-color: aquamarine; margin-top: 100px;">
+         <div id="Monday" class="day">Monday</div>
+         <div class="day">TuesDay</div>
+         <div class="day">Wednesday</div>
+         <div class="day">ThusDay</div>
+         <div class="day">Friday</div>
+         <div class="day">SaturDay</div>
+         <div class="day">SunDay</div>
+    </div>
+    <script>
+        const weekelement = document.getElementById("week")
+        for(let i =0 ; i < weekelement.children.length; i++){
+            // console.log( weekelement.children[i].innerHTML)
+            weekelement.children[i].style.color = "red"
+        }
+        // get parent element by child
+        const childelement = document.getElementById("Monday")
+        console.log(childelement.parentElement)
+
+       const second =  document.querySelector("div:nth-child(2)")
+       const last =  document.querySelector("div:last-child")
+       const sat = document.querySelector("div:nth-child(6)");
+       const sun = sat.nextElementSibling;
+       const prev = sat.previousElementSibling
+       console.log(sun.innerHTML, prev.innerHTML)
+    </script>
+</body>
+</html>
