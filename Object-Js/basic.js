@@ -50,7 +50,7 @@ function getCount(users) {
             // mapOfResult['22'] = 2
         }
         else {
-            mapOfResult[users[i].age] = 1   
+            mapOfResult[users[i].age] = 1
         }
     }
     console.log(mapOfResult)
@@ -117,7 +117,7 @@ const output = users.filter((x) => x.age < 30).map((x) => x.firstname)
 
 //  learn again 22 dec 2024 
 
-const num = { n :10}
+const num = { n: 10 }
 const n = "faiz"
 num[n] = 20     // here we are passing the reference of n which is faiz
 // console.log(num)
@@ -133,33 +133,33 @@ const product = {
     name: 'Smartphone',
     price: 25000,
     specifications: {
-      battery: '4000mAh',
-      processor: 'Octa-core',
-      features: {
-        waterproof: true,
-        camera: {
-          front: '16MP',
-          back: '48MP'
+        battery: '4000mAh',
+        processor: 'Octa-core',
+        features: {
+            waterproof: true,
+            camera: {
+                front: '16MP',
+                back: '48MP'
+            }
         }
-      }
     },
     stock: 100
-  };
+};
 
 // const name = product.name
 // const price =  product.price
 // const stock =  product.stock
 
-const battery  = product.specifications.battery
+const battery = product.specifications.battery
 
 // alternatice approach  destructing
 
 const stock = 400;
-const { name  , price , stock: productstock,  specifications : { battery : updatebattery } } = product;
+const { name, price, stock: productstock, specifications: { battery: updatebattery } } = product;
 // console.log(productstock, stock)
-
+const { specifications: { features: { camera: { front } } } } = product
+console.log(front)
 // front , 
 
 console.log(updatebattery)
 
- 
