@@ -92,13 +92,12 @@ function ageCheck(age) {
 //    }
 // }
 
-// let number = 10;
-
-// while(number <= 20){      // false
-//       if(number % 2 != 0){
-//         console.log(` odd number ${number}`)
-//       }
-//       number++;
+// let num = 10;
+// while (num <= 20) {
+//   if (num % 2 != 0) {
+//     console.log(`number is odd${num}`)
+//   }
+//   num++;
 // }
 
 // let str = "fai_zud_din";
@@ -119,51 +118,133 @@ function getMonthbyCode(monthCode) {
     11: "nov",
     12: "dec",
   };
-//   console.log(MonthName[monthCode])
-//   switch (monthCode) {
-//     case 1:
-//       console.log("jan");
-//       break;
-//     case 2:
-//       console.log("feb");
-//       break;
-//     case 3:
-//       console.log("mar");
-//       break;
-//     case 4:
-//       console.log("aplr");
-//       break;
-//     case 5:
-//       console.log("may");
-//       break;
-//     case 6:
-//       console.log("jun");
-//       break;
-//     case 7:
-//       console.log("jul");
-//       break;
-//     case 8:
-//       console.log("aug");
-//       break;
-//     case 9:
-//       console.log("sep");
-//       break;
-//     case 10:
-//       console.log("oct");
-//       break;
-//     case 11:
-//       console.log("nov");
-//       break;
-//     case 12:
-//       console.log("dec");
-//       break;
-//     default:
-//       console.log("Invalid code ur provide !");
-//       break;
-//   }
+  console.log(MonthName[monthCode])
+  //   switch (monthCode) {
+  //     case 1:
+  //       console.log("jan");
+  //       break;
+  //     case 2:
+  //       console.log("feb");
+  //       break;
+  //     case 3:
+  //       console.log("mar");
+  //       break;
+  //     case 4:
+  //       console.log("aplr");
+  //       break;
+  //     case 5:
+  //       console.log("may");
+  //       break;
+  //     case 6:
+  //       console.log("jun");
+  //       break;
+  //     case 7:
+  //       console.log("jul");
+  //       break;
+  //     case 8:
+  //       console.log("aug");
+  //       break;
+  //     case 9:
+  //       console.log("sep");
+  //       break;
+  //     case 10:
+  //       console.log("oct");
+  //       break;
+  //     case 11:
+  //       console.log("nov");
+  //       break;
+  //     case 12:
+  //       console.log("dec");
+  //       break;
+  //     default:
+  //       console.log("Invalid code ur provide !");
+  //       break;
+  //   }
 }
 
-getMonthbyCode(1); // Jan
-getMonthbyCode(2); // feb
-getMonthbyCode(6); // Jun
-getMonthbyCode(10); // oct
+// getMonthbyCode(1); // Jan
+// getMonthbyCode(2); // feb
+// getMonthbyCode(6); // Jun
+// getMonthbyCode(10); // oct
+
+
+
+
+
+// let number = 20;
+// while (number >= 11) {
+//   console.log(number)
+//   number--
+
+// }
+
+// for (let num = 20; num >= 11; num--) {
+//   console.log(num);
+// }
+
+
+
+function monthbyCode(monthcode) {
+  const MonthName = {
+    1: "jan",
+    2: "jan",
+    3: "jan",
+    4: "jan",
+    5: "jan",
+    6: "jan",
+    7: "jan",
+    8: "jan",
+    9: "jan",
+    10: "jan",
+    11: "jan",
+    12: "jan",
+
+  }
+  switch (monthcode) {
+    case 1:
+      console.log("jan");
+      break;
+    case 2:
+      console.log("feb");
+      break;
+    case 3:
+      console.log("march");
+      break;
+    case 4:
+      console.log("april");
+      break;
+    case 5:
+      console.log("may");
+      break;
+    case 6:
+      console.log("jun");
+      break;
+    case 7:
+      console.log("july");
+      break;
+    case 8:
+      console.log("august");
+      break;
+    case 9:
+      console.log("septem");
+      break;
+    case 10:
+      console.log("oct");
+      break;
+    case 11:
+      console.log("nov");
+      break;
+    case 12:
+      console.log("dec");
+      break;
+    // }
+  }
+
+}
+
+
+monthbyCode(3);
+monthbyCode(4);
+monthbyCode(5);
+monthbyCode(6);
+
