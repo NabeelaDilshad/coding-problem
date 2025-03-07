@@ -139,3 +139,22 @@ function rorateArray(arr, d){
 rorateArray(arr, 2)
 rorateArray(arr, 3)
 rorateArray(arr, 9)
+
+const checkCondition = (condition, context) => {
+    try {
+      return condition && context ? new Function("with(this) { return " + condition + "; }").call(context) : false;
+    } catch (error) {
+      console.error("Condition evaluation error:", error);
+      return false;
+    }
+  };
+  
+  const productConfig = {
+    serviceOption: {
+      value: "IPVS"
+    }
+  };
+  
+  const c = checkCondition("serviceOption.value === 'IPVS'", productConfig);
+  console.log(c); // ✅ Should return true
+  
