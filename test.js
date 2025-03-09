@@ -158,3 +158,26 @@ const checkCondition = (condition, context) => {
   const c = checkCondition("serviceOption.value === 'IPVS'", productConfig);
   console.log(c); // ✅ Should return true
   
+
+  console.log("object testing ---------------------------------- ")
+  const  product = {
+    id: 101,
+    name: 'Smartphone',
+    price: 25000,
+    stock: 100
+};
+
+const specifications =  {
+        battery: '4000mAh',
+        processor: 'Octa-core',
+        features: {
+            waterproof: true,
+            camera: {
+                front: '16MP',
+                back: '48MP'
+            }
+        }
+    }
+
+ const product_update = { ...product, ...specifications}
+ console.log(product_update)

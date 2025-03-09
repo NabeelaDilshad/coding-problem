@@ -163,11 +163,8 @@ console.log(front)
 
 // console.log(updatebattery)
 
-<<<<<<< HEAD
-=======
 
 
 // for(let [first , second] of en){
 //     console.log(first)
 // }
->>>>>>> de202690394e96ee99dba2f39780852fa2a4e7c9
