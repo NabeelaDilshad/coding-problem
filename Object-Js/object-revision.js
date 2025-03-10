@@ -29,6 +29,34 @@ console.log(mergeObject(isAdmin,isValidAddress))
 
 
 
+//  advance way to handle 
+function mergeObject(isAdmincheck, isValidAddresscheck) {
+    // let newobj = {}
+    // if (isAdmincheck) {
+    //     for(let key in ageinformation){
+    //      obj[key] = ageinformation[key] // ageinformation['age']
+    //     }
+    //     // newobj = { ...obj, ...ageinformation}
+    // }
+    // if (isValidAddresscheck) {
+    //     // newobj = { ...obj,...newobj, ...validAddress }
+    //      for(let key in validAddress){
+    //          obj[key] = validAddress[key]
+    //     }
+    // }
+    // retrun 
+    // if(!isValidAddresscheck && !isValidAddresscheck){
+    //      return obj
+    // }
+    // return obj
+    
+    return { ...obj, 
+       ...(isAdmin ? ageinformation : {}),
+       ...(isValidAddress ? validAddress : {}),
+    }
+}
+console.log(mergeObject(isAdmin,isValidAddress))
+
 
 
 
