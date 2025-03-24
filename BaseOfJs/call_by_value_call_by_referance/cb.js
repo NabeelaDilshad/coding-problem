@@ -43,3 +43,19 @@ function fnarray(list){
 const list = [50,60,70]
 fnarray(list);
 console.log(list)
+
+
+
+//  object example
+const student = { 
+    name :"faiz",
+    age :25
+};
+function userupdate(a = {...student}){
+      a.age = 30;
+      a.pincode  = 274402;
+      console.log(a) 
+}
+userupdate();
+
+console.log(student)

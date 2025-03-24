@@ -3,7 +3,7 @@
 // 1. !! (Double Negation) - Converts value to boolean
 console.log(!!1);        // true
 console.log(!!0);        // false
-console.log(!!"hello");  // true
+console.log(!!"hello");  // true  
 console.log(!!null);     // false
 
 // 2. || (Logical OR) - Returns first truthy value or last falsy value
@@ -32,3 +32,5 @@ console.log(false || "Default"); // "Default"
 console.log(false ?? "Default"); // false
 console.log(0 || 100); // 100
 console.log(0 ?? 100); // 0
+
+// optinal chaning operater
