@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
 
         
-        const fullName = document.getElementById("full-name")
+        const fullName = document.getElementById("full-name").value
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         const gender = document.querySelector('input[name="gender"]:checked').value;

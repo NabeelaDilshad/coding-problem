@@ -28,6 +28,9 @@ button.addEventListener("click", () => {
   button.classList.toggle("active");
 });
 
+
+
+
 /**
  * Demonstrating innerHTML, outerHTML, and innerText
  */
@@ -67,6 +70,37 @@ p.classList.add("class1", "class2");
 // Append the paragraph to the heading, and the heading to the body
 heading.appendChild(p);
 document.body.appendChild(heading);
+
+
+
+//  alternative best and fater approach for creating element with text
+  /** Alternative Approaches
+    1. Using textContent instead of innerText
+    It's faster and more reliable when you don’t need CSS rendering:
+
+             p.textContent = "This is created dynamically";
+    
+
+   2. Using createTextNode (Manual but Fastest)
+   
+    const textNode = document.createTextNode("This is created dynamically");
+    p.appendChild(textNode);
+
+
+  3. Using innerHTML for Quick Setup
+             Be careful with user input (XSS risks), but it’s concise
+   
+        let heading = document.createElement("h1");
+        heading.innerHTML = `<p id="pera" class="class1 class2" style="color:red">This is created dynamically</p>`;
+        document.body.appendChild(heading);
+
+
+    4. Template Literals with insertAdjacentHTML
+          let heading = document.createElement("h1");
+          heading.insertAdjacentHTML("beforeend", `<p id="pera" class="class1 class2" style="color:red">This is created dynamically</p>`);
+          document.body.appendChild(heading);
+
+    */
 
 // Create another div dynamically and check for attributes
 const dynamicDiv = document.createElement("div");
