@@ -56,13 +56,13 @@ function placeOrder() {
 }
 
 // Adding item to cart
-// addItemToCart("Laptop", 1, () => {
-//     // After item is added to cart, process payment
-//     processPayment(1000, () => {
-//         // After payment is processed, place the order
-//         placeOrder();
-//     });
-// });
+addItemToCart("Laptop", 1, () => {
+    // After item is added to cart, process payment
+    processPayment(1000, () => {
+        // After payment is processed, place the order
+        placeOrder();
+    });
+});
 
 
 

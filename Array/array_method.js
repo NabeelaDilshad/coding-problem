@@ -1,21 +1,21 @@
 
 const arr = [1,2]
 //push Appends new elements to the end of an array, and returns the new length of the array.
-const push = arr.push(4,5)
+// const push = arr.push(4,5)
 // console.log(arr);
 
 //pop Removes the last element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
-const p = arr.pop();
+// const p = arr.pop();
 // console.log(arr, 'p', p);
 
 
 // shift Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
-const shiftelement = arr.shift();
+// const shiftelement = arr.shift();
 // console.log(shiftelement, arr);
 
 // unshift Inserts new elements at the start of an array, and returns the new length of the array.
 const unshiftelement = arr.unshift(100);
-// console.log(unshiftelement, arr);
+console.log(unshiftelement, arr);
 
 
 
@@ -150,7 +150,7 @@ const items = [
             return result;
       }
     const rp =  mapprojectcode(users)
-    console.log(rp)
+    // console.log(rp)
 
     // OP   ---->
     //   [
