@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events Examples</title>
+  <style>
+    .btn { margin: 10px; padding: 10px; background-color: lightblue; cursor: pointer; }
+    input { margin: 10px; padding: 5px; }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Events Examples</h1>
+
+  <!-- Mouse Events -->
+  <button class="btn" id="clickBtn">Click Me</button>
+  <div class="btn" id="dblClickBtn">Double Click Me</div>
+
+  <!-- Keyboard Events -->
+  <input type="text" placeholder="Type something..." id="keyboardInput">
+
+  <!-- Form Events -->
+  <form id="demoForm">
+    <input type="text" name="name" placeholder="Enter name">
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Clipboard Events -->
+  <input type="text" value="Copy me" id="copyInput">
+
+  <!-- Drag Events -->
+  <div class="btn" id="dragMe" draggable="true">Drag Me</div>
+  <div class="btn" id="dropZone" style="background-color: #eee; height: 50px;">Drop Here</div>
+
+  <!-- Touch Events -->
+  <div class="btn" id="touchArea">Touch Me (Mobile)</div>
+
+  <!-- Window Events -->
+  <div class="btn" id="resizeInfo">Resize Window</div>
+
+  <!-- Media Events -->
+  <video id="mediaVideo" width="300" controls>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  </video>
+
+  <!-- CSS Transition/Animation Events -->
+  <div class="btn" id="animateBox" style="transition: all 1s;">Animate Me</div>
+
+  <script>
+    // Mouse Events
+    document.getElementById("clickBtn").addEventListener("click", () => alert("Button Clicked!"));
+    document.getElementById("dblClickBtn").addEventListener("dblclick", () => alert("Double Clicked!"));
+
+    // Keyboard Events
+    document.getElementById("keyboardInput").addEventListener("keydown", e => console.log("Key Down:", e.key));
+    document.getElementById("keyboardInput").addEventListener("keyup", e => console.log("Key Up:", e.key));
+
+    // Form Events
+    document.getElementById("demoForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Form Submitted!");
+    });
+
+    // Clipboard Events
+    document.getElementById("copyInput").addEventListener("copy", () => alert("Copied!"));
+
+    // Drag & Drop Events
+    const dragItem = document.getElementById("dragMe");
+    const dropZone = document.getElementById("dropZone");
+
+    dragItem.addEventListener("dragstart", e => e.dataTransfer.setData("text/plain", "dragMe"));
+    dropZone.addEventListener("dragover", e => e.preventDefault());
+    dropZone.addEventListener("drop", e => {
+      e.preventDefault();
+      alert("Dropped!");
+    });
+
+    // Touch Events
+    document.getElementById("touchArea").addEventListener("touchstart", () => alert("Touched!"));
+
+    // Window Events
+    window.addEventListener("resize", () => console.log("Window Resized"));
+    window.addEventListener("scroll", () => console.log("Scrolled"));
+
+    // Media Events
+    const mediaVideo = document.getElementById("mediaVideo");
+    mediaVideo.addEventListener("play", () => console.log("Video Playing"));
+    mediaVideo.addEventListener("pause", () => console.log("Video Paused"));
+    mediaVideo.addEventListener("ended", () => console.log("Video Ended"));
+
+    // Animation / Transition Events
+    const animateBox = document.getElementById("animateBox");
+    animateBox.addEventListener("click", () => {
+      animateBox.style.transform = "translateX(100px)";
+    });
+    animateBox.addEventListener("transitionend", () => alert("Transition Complete!"));
+
+    // Custom Event
+    const customBtn = document.createElement("button");
+    customBtn.textContent = "Fire Custom Event";
+    customBtn.className = "btn";
+    document.body.appendChild(customBtn);
+
+    customBtn.addEventListener("my-custom", e => alert("Custom Event Triggered: " + JSON.stringify(e.detail)));
+
+    customBtn.addEventListener("click", () => {
+      const evt = new CustomEvent("my-custom", { detail: { message: "Hello from Custom Event" } });
+      customBtn.dispatchEvent(evt);
+    });
+  </script>
+
+</body>
+</html>
