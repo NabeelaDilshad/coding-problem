@@ -20,39 +20,39 @@ getLocation("delhi");
 
 */
 
-function ageCheck(age) {
-  if (age < 18) {
-    console.log(`you are miner`);
-  } else if (age >= 18 && age < 25) {
-    console.log(`your are young focus your goals`);
-  } else if (age >= 25 && age <= 45) {
-    console.log(`you have focus more time with family`);
-  } else {
-    console.log(`do something`);
-  }
-}
+// function ageCheck(age) {
+//   if (age < 18) {
+//     console.log(`you are miner`);
+//   } else if (age >= 18 && age < 25) {
+//     console.log(`your are young focus your goals`);
+//   } else if (age >= 25 && age <= 45) {
+//     console.log(`you have focus more time with family`);
+//   } else {
+//     console.log(`do something`);
+//   }
+// }
 
 // ageCheck(16);
 // ageCheck(20);
 // ageCheck(30);
 // ageCheck(50);
 
-function ageCheck(age) {
-  switch (true) {
-    case age < 18:
-      console.log(`You are a minor`);
-      break;
-    case age >= 18 && age < 25:
-      console.log(`You are young, focus on your goals`);
-      break;
-    case age >= 25 && age <= 45:
-      console.log(`You have to focus more time with family`);
-      break;
-    default:
-      console.log(`Do something`);
-      break;
-  }
-}
+// function ageCheck(age) {
+//   switch (true) {
+//     case age < 18:
+//       console.log(`You are a minor`);
+//       break;
+//     case age >= 18 && age < 25:
+//       console.log(`You are young, focus on your goals`);
+//       break;
+//     case age >= 25 && age <= 45:
+//       console.log(`You have to focus more time with family`);
+//       break;
+//     default:
+//       console.log(`Do something`);
+//       break;
+//   }
+// }
 
 // ageCheck(10);
 // ageCheck(20);
@@ -62,22 +62,22 @@ function ageCheck(age) {
 // whenever we are using switch(true) then  case will check condition for that ,
 // if we pass swicth(value) then case will check value only
 
-function ageCheck(age) {
-  switch (true) {
-    case age == 10:
-      console.log(`You are a minor`);
-      break;
-    case age == 20:
-      console.log(`You are young, focus on your goals`);
-      break;
-    case age == 30:
-      console.log(`You have to focus more time with family`);
-      break;
-    default:
-      console.log(`Do something`);
-      break;
-  }
-}
+// function ageCheck(age) {
+//   switch (true) {
+//     case age == 10:
+//       console.log(`You are a minor`);
+//       break;
+//     case age == 20:
+//       console.log(`You are young, focus on your goals`);
+//       break;
+//     case age == 30:
+//       console.log(`You have to focus more time with family`);
+//       break;
+//     default:
+//       console.log(`Do something`);
+//       break;
+//   }
+// }
 
 // ageCheck(10);
 // ageCheck(20);
@@ -100,8 +100,8 @@ function ageCheck(age) {
 //   num++;
 // }
 
-// let str = "fai_zud_din";
-// console.log(str.split('_'))
+let str = "fai_zud_din";
+console.log(str.split('_'))
 
 function getMonthbyCode(monthCode) {
   const MonthName = {
@@ -118,7 +118,7 @@ function getMonthbyCode(monthCode) {
     11: "nov",
     12: "dec",
   };
-  console.log(MonthName[monthCode])
+  // console.log(MonthName[monthCode])
   //   switch (monthCode) {
   //     case 1:
   //       console.log("jan");
