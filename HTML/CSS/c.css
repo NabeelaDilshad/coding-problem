@@ -13,23 +13,26 @@ form {
 
 /* body{
      background-color: gray;
-} */
+} 
 
-/* 
+
 h2{
      color: green;
      font-size: 20px;
-} */
+}  */
 
 .school_heading{
     color: green;
     text-align: center;
 }
 
-/* 
-input[type="text"] {
-     border: 1px solid red;
-} */
+#name{
+    width: 400px;
+}
+
+input[type="number"] {
+     width: 40px
+}
 
 
 .form_container{
@@ -43,9 +46,9 @@ input[type="text"] {
 }
 
 
-.news p{
+/* .news p{
      color: red
-}
+} */
 
 
 .news > p{
@@ -67,3 +70,25 @@ input[type="text"] {
       width: 300px;
       height: 300px;
 }
+
+h2 + p {
+     color: goldenrod
+   }
+
+
+
+input:focus {
+     background-color:black;
+  }
+  
+  ul li:nth-child(even){
+      color:red
+  }
+  
+  ul li:nth-child(odd){
+      color:blue
+  }
+
+  /* ul li:first-child {
+     color:white
+ } */

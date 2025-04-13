@@ -24,6 +24,10 @@ Selects elements with a specific class attribute.
 }
 
 
+p.myClass {
+  background-color: yellow;
+}
+
 
 4. ID Selector (#)
 Selects an element with a specific id.
@@ -41,7 +45,6 @@ Selects elements based on the presence of an attribute or its value.
 input[type="text"] {
   border: 1px solid black;
 }
-
 
 
 6. Group Selector (,)
@@ -64,7 +67,7 @@ div p {
 
 
 8. Child Selector (>)
-Selects direct child elements of a specified element.
+Selects direct child elements of a specified element.  means direct child
 
 
 ul > li {
@@ -159,3 +162,18 @@ Selects all elements that do not match the given selector.
   color: blue;
 }
 
+
+
+<!-- for more dept psude class link -->
+<!-- https://www.w3schools.com/cssref/css_ref_pseudo_classes.php -->
+
+
+
+
+Inline Style
+   ↓
+ID Selector (#id)
+   ↓
+Classes (.class), Pseudo-classes (:hover), Attribute Selectors ([type="text"])
+   ↓
+Element Selectors (h1, p, div), Pseudo-elements (::before, ::after)
