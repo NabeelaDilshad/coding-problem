@@ -6,6 +6,9 @@
   <style>
     .btn { margin: 10px; padding: 10px; background-color: lightblue; cursor: pointer; }
     input { margin: 10px; padding: 5px; }
+    .mouseenter{
+       background-color: rgb(238, 175, 144);
+    }
   </style>
 </head>
 <body>
@@ -15,14 +18,19 @@
   <!-- Mouse Events -->
   <button class="btn" id="clickBtn">Click Me</button>
   <div class="btn" id="dblClickBtn">Double Click Me</div>
+  <div class="btn" id="mouseleave">Mouse leave and up </div>
+  
 
   <!-- Keyboard Events -->
   <input type="text" placeholder="Type something..." id="keyboardInput">
 
   <!-- Form Events -->
   <form id="demoForm">
-    <input type="text" name="name" placeholder="Enter name">
+    <input type="text" id="username" name="name" placeholder="Enter name">
+    <input type="text" id="password" name="password" placeholder="Enter Your password">
+    <button type="reset">Reset</button>
     <button type="submit">Submit</button>
+    <button type="button"> addtion button</button>
   </form>
 
   <!-- Clipboard Events -->
@@ -50,6 +58,12 @@
     // Mouse Events
     document.getElementById("clickBtn").addEventListener("click", () => alert("Button Clicked!"));
     document.getElementById("dblClickBtn").addEventListener("dblclick", () => alert("Double Clicked!"));
+    document.getElementById("mouseleave").addEventListener("mouseenter", function(){
+        this.classList.add("mouseenter")
+    });
+    document.getElementById("mouseleave").addEventListener("mouseleave", function(){
+        this.classList.remove("mouseenter")
+    });
 
     // Keyboard Events
     document.getElementById("keyboardInput").addEventListener("keydown", e => console.log("Key Down:", e.key));
@@ -61,8 +75,25 @@
       alert("Form Submitted!");
     });
 
+    document.getElementById('username').addEventListener('change', function(){
+       console.log('call when value of input change')
+    })
+    document.getElementById('username').addEventListener('input', function(){
+       console.log('input called every input change')
+    })
+    document.getElementById('demoForm').addEventListener('reset', function(){
+       console.log('form reset done !!!')
+    })
+    document.getElementById('username').addEventListener('blur', function(){
+       console.log('called once when focus out element !!!')
+    })
+    document.getElementById('username').addEventListener('focus', function(){
+       console.log('called once when focus in input !!!')
+    })
+
     // Clipboard Events
     document.getElementById("copyInput").addEventListener("copy", () => alert("Copied!"));
+    document.getElementById("copyInput").addEventListener("paste", () => console.log("paste called"));
 
     // Drag & Drop Events
     const dragItem = document.getElementById("dragMe");
@@ -93,6 +124,8 @@
     animateBox.addEventListener("click", () => {
       animateBox.style.transform = "translateX(100px)";
     });
+    
+    animateBox.addEventListener("transitionstart", () => alert("Transition start!"));
     animateBox.addEventListener("transitionend", () => alert("Transition Complete!"));
 
     // Custom Event

@@ -1,0 +1,132 @@
+/* 
+✅ 1. Absolute Units
+These are fixed and do not scale based on screen size.
+
+Unit	Meaning	Description
+px	    Pixels	Most common unit. 1px = 1 dot on the screen (roughly).
+pt	    Points	1pt = 1/72 of an inch. Used in print.
+pc	    Picas	1pc = 12pt. Rarely used.
+in	    Inches	1in = 2.54cm = 96px. Used for print layouts.
+cm	    Centimeters	Based on physical size. 1cm = ~37.8px
+mm	    Millimeters	1mm = 1/10th of 1cm. Rare.
+
+
+
+✅ 2. Relative to Font Size
+These scale based on font size (of parent or root).
+
+Unit	  Meaning	Description
+em	      Relative to parent font size	1em = 100% of the parent's font size. Nested ems can multiply.
+rem	      Relative to root font size	1rem = 100% of the root (html) font size. More predictable.
+ex	      x-height of font	Height of the letter 'x'. Not widely used.
+ch	      Width of 0 character	Used in monospaced contexts (e.g., code blocks).
+
+🟢 Use case: For responsive, scalable designs (especially rem).
+
+
+✅ 3. Relative to Viewport
+These change based on the browser window size.
+
+Unit	 Meaning	Description
+vw	     Viewport Width	1vw = 1% of the width of the viewport
+vh	     Viewport Height	1vh = 1% of the height of the viewport
+vmin	Minimum of vw or vh	Chooses the smaller of the two
+vmax	Maximum of vw or vh	Chooses the larger of the two
+
+
+Agar screen width = 1000px aur height = 800px hai
+🔸 to vmin = 1% of 800 = 8px
+🔸 to box size = 50 × 8 = 400px
+
+Agar screen width = 600px aur height = 1000px
+🔸 to vmin = 1% of 600 = 6px
+🔸 to box size = 50 × 6 = 300px
+
+
+🟢 Use case: Full-screen layouts, hero sections, or responsive typography.
+
+✅ 4. Percentages (%)
+
+Unit	 Meaning	Description
+%	      Relative to parent	50% width means 50% of the parent's width.
+🟢 Use case: For flexible grids and responsive layouts.
+
+
+
+
+
+  Math fun
+
+calc()	Exact math with units	✅ Yes
+min()	Choose smallest of values	✅ Yes
+max()	Choose largest of values	✅ Yes
+clamp()	Set flexible min-preferred-max	✅ Yes
+
+*/
+
+*{
+     margin:0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.heading{
+    font-size: 20px;
+}
+
+.heading p{
+    font-size: 2em;
+}
+
+.container{
+     height: calc(100vh - 30px);
+     background-color: rgb(14, 118, 55);
+}
+
+.box{
+     width: 500px;
+     height: 500px;
+     border: 1px solid red;
+     background-color: aqua;
+}
+
+.child-box{
+    width: 50%;
+    height: 50%;
+    border: 1px solid rgb(0, 18, 183);
+    background-color: rgb(255, 200, 0);
+}
+
+
+
+/* 
+
+✅ background-clip kya karta hai?
+🔸 Ye define karta hai ki background (image ya color) kis area tak visible hoga.
+
+
+✅ background-origin kya karta hai?
+border-box	Background image border se start hoti hai (default)
+padding-box	Background image padding se start hoti hai
+content-box	Background image content se start hoti hai
+🔸 Ye background image ka starting point (origin) define karta hai — kis area se image start hogi.
+
+
+
+
+ word wrap , word break
+ text-overflow , writing mode
+ background clip , 
+ backfround bend mode
+ media query
+ resize
+ clip path
+ filter
+ transtion
+ transfrom
+ animation
+ object fit
+ scoll styling
+ axpect ratio
+*/
+

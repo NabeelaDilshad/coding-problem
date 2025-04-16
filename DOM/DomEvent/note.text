@@ -1,0 +1,116 @@
+1. UI Events
+
+Event	Description
+load	When a resource is loaded
+unload	When the page is unloaded
+resize	Window is resized
+scroll	Element/page is scrolled
+error	Resource loading fails
+
+
+
+
+⌨️ 2. Keyboard Events
+
+Event	Description
+keydown	Key is pressed down
+keyup	Key is released
+keypress	(Deprecated) Key is pressed
+
+
+
+🖱️ 3. Mouse Events
+
+Event	Description
+click	Mouse click
+dblclick	Double click
+mousedown	Mouse button down
+mouseup	Mouse button released
+mousemove	Mouse is moved
+mouseenter	Mouse enters element
+mouseleave	Mouse leaves element
+mouseover	Mouse over element or its children
+mouseout	Mouse leaves element or its children
+contextmenu	Right-click
+
+
+📱 4. Touch Events (Mobile)
+
+Event	Description
+touchstart	Finger touches screen
+touchend	Finger leaves screen
+touchmove	Finger moves on screen
+touchcancel	Touch interrupted
+
+
+
+🧠 5. Focus Events
+
+Event	Description
+focus	Element receives focus
+blur	Element loses focus
+focusin	Like focus, but bubbles
+focusout	Like blur, but bubbles
+
+
+🔁 6. Form Events
+
+Event	Description
+submit	Form is submitted
+change	Input value changes (on blur)
+input	Input value changes (live)
+reset	Form is reset
+invalid	Input validation fails
+select	Text is selected
+
+
+💾 7. Clipboard Events
+
+Event	Description
+copy	Copy to clipboard
+cut	Cut to clipboard
+paste	Paste from clipboard
+
+
+🌐 8. Drag & Drop Events
+
+Event	Description
+dragstart	Dragging starts
+drag	Element is being dragged
+dragend	Dragging ends
+dragenter	Drag enters drop zone
+dragover	Drag over drop zone
+dragleave	Drag leaves drop zone
+drop	Item is dropped
+
+
+🎧 9. Media Events
+
+Event	Description
+play	Media starts playing
+pause	Media is paused
+ended	Media has ended
+volumechange	Volume is changed
+timeupdate	Playback position changes
+loadedmetadata	Metadata loaded
+canplay	Media can start playing
+
+
+🌐 10. Network / WebSocket Events
+
+Event	Description
+online	Browser goes online
+offline	Browser goes offline
+open	WebSocket connection opens
+message	Message received on WebSocket
+error	Error in WebSocket
+close	WebSocket connection closes
+
+
+🔄 11. Mutation Events (Deprecated, use MutationObserver)
+
+Event	Description
+DOMSubtreeModified	Any changes in DOM
+DOMNodeInserted	Node inserted into DOM
+DOMNodeRemoved	Node removed from DOM
+Use MutationObserver instead of these.
