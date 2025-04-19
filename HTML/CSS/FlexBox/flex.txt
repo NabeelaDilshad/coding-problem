@@ -1,0 +1,35 @@
+Feature	           align-items	                              align-content
+Works on	     Each item in container	                   Group of rows in container
+Requires wrap     	❌ No	                            ✅ Yes (must use flex-wrap: wrap)
+Use case	     Align individual items vertically	     Align multiple rows of items
+Cross axis         	✅ Yes	                                   ✅ Yes
+
+
+
+🔍 Use when:  (align-items)
+Ek row ya column hai.
+Tum items ko top/middle/bottom pe rakhna chahte ho.
+📌 Example
+
+align-items: flex-start;       /* top aligned */
+align-items: center;           /* vertically centered */
+align-items: flex-end;         /* bottom aligned */
+
+
+
+🔍 Use when  (align-content)
+
+Multiple wrapped rows or columns hain.
+Tum rows ko overall align karna chahte ho.
+📌 Example:
+
+align-content: flex-start;   /* All rows align to top */
+align-content: center;       /* All rows center in container */
+align-content: space-between;Equal space between rows
+
+
+
+------------ GRID  ----------> 
+
+justify-content: Horizontal alignment of the whole grid inside the container
+align-content: Vertical alignment of the whole grid inside the container

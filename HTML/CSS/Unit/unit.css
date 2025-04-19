@@ -88,6 +88,15 @@ clamp()	Set flexible min-preferred-max	✅ Yes
      height: 500px;
      border: 1px solid red;
      background-color: aqua;
+     font-size: 20px;
+
+}
+
+.box p:nth-child(1){
+   font-size: 2em;
+}
+.box p:nth-child(2){
+     font-size: 3em;
 }
 
 .child-box{
@@ -113,20 +122,26 @@ content-box	Background image content se start hoti hai
 
 
 
-
- word wrap , word break
- text-overflow , writing mode
- background clip , 
- backfround bend mode
- media query
- resize
- clip path
- filter
- transtion
- transfrom
- animation
- object fit
  scoll styling
  axpect ratio
 */
 
+
+
+/* @media screen and (min-width: 300px) and (max-width: 700px) {
+    body {
+      background-color: lightgreen;
+    }
+  }
+  
+  @media screen and (min-width: 701px) {
+    body {
+      background-color: red;
+    }
+  } */
+  
+
+   /* short hand */
+   
+  /* transition: [property] [duration] [timing-function] [delay]; */
+  /* animation: [name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state]; */
