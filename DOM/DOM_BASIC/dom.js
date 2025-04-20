@@ -41,7 +41,7 @@ const container = document.getElementById("container");
 console.log(container.innerHTML); // Output: Content inside the container
 container.innerHTML = "<b>Hi there!</b>";
 console.log(container.innerHTML); // Output: "<b>Hi there!</b>"
-
+console.log(container.outerHTML);  // <div id="container"><b>Hi there!</b></div>
 
 
 // Get and replace an element with outerHTML
@@ -81,7 +81,7 @@ document.body.appendChild(heading);
 //  alternative best and fater approach for creating element with text
 /** Alternative Approaches
   1. Using textContent instead of innerText
-  It's faster and more reliable when you don’t need CSS rendering:
+  It's faster and more reliable when you don’t need CSS rendering: it's return text if display none
 
            p.textContent = "This is created dynamically";
   
