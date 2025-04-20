@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="./usertest.css" />
+</head>
+
+<body>
+    <div class="form_container">
+        <div class="box">
+            <h1>User Management System</h1>
+            <form id="Management-form">
+                <input type="text" id="username" name="username" placeholder="Enter Your Name" required />
+                <input type="email" id="useremail" name="useremail" placeholder="Enter Your Email" required />
+                <input type="text" id="userAddress" name="userAddress" placeholder="Enter Your Address" required />
+                <button type="submit"> Add User </button>
+            </form>
+    
+            <table id="usertable" style="margin-top: 50px;">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th style="width:200px">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--  -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./usertest.js"></script>
+</body>
+
+</html>
