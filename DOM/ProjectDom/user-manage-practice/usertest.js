@@ -6,6 +6,7 @@ const emailInput = document.getElementById("useremail");
 const addressInput = document.getElementById("userAddress");
 const usertable = document.querySelector("#usertable tbody")
 const formButton = document.querySelector('#Management-form button')
+console.log(users)
 
 userForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -16,21 +17,21 @@ userForm.addEventListener("submit", function (event) {
     return;
   }
 
-//   const obj = {
-//     name: name,
-//     email: email,
-//     address: address,
-//   };
-//   users.push(obj);
-  if(editIndex === -1){
-    users.push({name, email, address})
+  //   const obj = {
+  //     name: name,
+  //     email: email,
+  //     address: address,
+  //   };
+  //   users.push(obj);
+  if (editIndex === -1) {
+    users.push({ name, email, address })
   }
   else {
-     users[editIndex] = {name, email, address}
-     editIndex = -1
-     formButton.textContent = "Add User"
+    users[editIndex] = { name, email, address }
+    editIndex = -1
+    formButton.textContent = "Add User"
   }
-  
+
   nameInput.value = ""
   emailInput.value = ""
   addressInput.value = ""
@@ -39,28 +40,28 @@ userForm.addEventListener("submit", function (event) {
 });
 
 
-function EditUser(index){
-   console.log("edit user", index)
-   nameInput.value = users[index].name
-   emailInput.value = users[index].email
-   addressInput.value = users[index].address
-   editIndex = index;
-   formButton.textContent = "Update User"
+function EditUser(index) {
+  console.log("edit user", index)
+  nameInput.value = users[index].name
+  emailInput.value = users[index].email
+  addressInput.value = users[index].address
+  editIndex = index;
+  formButton.textContent = "Update User"
 }
 
-function DeleteUser(index){
-    console.log("delete user", index)
-    users.splice(index, 1)
-    renderList()
+function DeleteUser(index) {
+  console.log("delete user", index)
+  users.splice(index, 1)
+  renderList()
 }
 
 
-function renderList(){
-    // clear the list
-    usertable.innerHTML = ""
-    users.forEach((user, index) => {
-        const tr = document.createElement("tr")
-        tr.innerHTML = `
+function renderList() {
+  // clear the list
+  usertable.innerHTML = ""
+  users.forEach((user, index) => {
+    const tr = document.createElement("tr")
+    tr.innerHTML = `
             <td> ${user.name}</td>
             <td> ${user.email}</td>
             <td> ${user.address}</td>
@@ -68,7 +69,7 @@ function renderList(){
                 <button onclick=EditUser(${index})>Edit</button>
                 <button onclick=DeleteUser(${index})>Delete</button>
             </div>
-        ` 
-       usertable.appendChild(tr)
-    })
+        `
+    usertable.appendChild(tr)
+  })
 }
