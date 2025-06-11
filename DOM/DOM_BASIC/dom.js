@@ -60,6 +60,8 @@ console.log(container.innerText); // Output: Visible text inside the container
 container.innerText = "Hi there!";
 console.log(container.innerText); // Output: "Hi there!"
 
+
+
 /**
  * Create and append dynamic elements to the DOM
  */
@@ -79,25 +81,26 @@ document.body.appendChild(heading);
 
 
 //  alternative best and fater approach for creating element with text
+
 /** Alternative Approaches
-  1. Using textContent instead of innerText
-  It's faster and more reliable when you don’t need CSS rendering: it's return text if display none
+      1. Using textContent instead of innerText
+              It's faster and more reliable when you don’t need CSS rendering: it's return text if display none
 
-           p.textContent = "This is created dynamically";
-  
+              p.textContent = "This is created dynamically";
+      
 
- 2. Using createTextNode (Manual but Fastest)
- 
-  const textNode = document.createTextNode("This is created dynamically");
-  p.appendChild(textNode);
+    2. Using createTextNode (Manual but Fastest)
+      
+          const textNode = document.createTextNode("This is created dynamically");
+          p.appendChild(textNode);
 
 
-3. Using innerHTML for Quick Setup
-           Be careful with user input (XSS risks), but it’s concise
- 
-      let heading = document.createElement("h1");
-      heading.innerHTML = `<p id="pera" class="class1 class2" style="color:red">This is created dynamically</p>`;
-      document.body.appendChild(heading);
+    3. Using innerHTML for Quick Setup
+          Be careful with user input (XSS risks), but it’s concise
+    
+          let heading = document.createElement("h1");
+          heading.innerHTML = `<p id="pera" class="class1 class2" style="color:red">This is created dynamically</p>`;
+          document.body.appendChild(heading);
 
 
   4. Template Literals with insertAdjacentHTML
@@ -113,3 +116,19 @@ dynamicDiv.setAttribute("id", "myDiv");
 dynamicDiv.setAttribute("class", "container");
 
 console.log(dynamicDiv.hasAttributes()); // Output: true
+
+
+
+
+/**
+    summary append Text
+
+    p.innerText = "This is created dynamically"; 
+    or 
+
+    p.textContent = "This is created dynamically";
+    or 
+
+    const textNode = document.createTextNode("This is created dynamically");
+    p.appendChild(textNode);
+ */
