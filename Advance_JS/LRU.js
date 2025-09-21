@@ -10,7 +10,7 @@ class LRU{
          if(index === -1){
                return -1
          }
-         const [item] = this.cheche.splice(index, 1)
+        const [item] = this.cheche.splice(index, 1)
         this.cheche.push( item)
     }
 
