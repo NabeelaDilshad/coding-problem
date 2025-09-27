@@ -9,7 +9,7 @@ function callbackfun(item, index, array) {
 }
 
 const r1 = array1.map(callbackfun);
-// console.log(r1);
+// console.log(r1);  //return new array
 
 // another way
 const r2 = array1.map(function callbackfun(item, index, array) {
