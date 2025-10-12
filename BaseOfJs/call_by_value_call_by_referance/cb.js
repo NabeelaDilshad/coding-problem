@@ -25,12 +25,12 @@ console.log(" --------------   pass by ref for obj------------------------------
 
 function fnobjcase(personobeject){
     personobeject.name = "updated name"
-    console.log(personobeject.name)
+    console.log(personobeject.name)  // "updated name"
 
 }
 const personobeject = { name : 'mack' , age : 35 };
 fnobjcase(personobeject);
-console.log(personobeject.name)
+console.log(personobeject.name) //  "updated name"
 
 
 console.log(" --------------   pass by ref for array-----------------------------------------")
