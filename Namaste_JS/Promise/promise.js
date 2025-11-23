@@ -139,3 +139,23 @@ const items = [
  }).then(( data) =>{
    console.log("it will always excute because .catch return a error which is a string , string is a resolve promise  !!!")
  })
+
+ // Async/Await Version
+// async function processOrder(itemId) {
+//   try {
+//     const cartData = await addToCart(itemId);
+//     const total = await calculateTotal(cartData);
+//     const paymentStatus = await proceedToPayment(total);
+//     const finalStatus = await generateReceipt(paymentStatus);
+//     console.log(finalStatus);
+//   } catch (error) {
+//     console.log("Error:", error);
+//   } finally {
+//     console.log(
+//       "It will always execute because catch handles errors and finally always runs."
+//     );
+//   }
+// }
+
+// Execute
+processOrder(1);
