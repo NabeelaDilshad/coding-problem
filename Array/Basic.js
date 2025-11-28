@@ -409,3 +409,18 @@ function moveZerosToEnd(numbers){
 console.log(moveZerosToEnd([0, 1, 2, 0, 3]));  // [1,2,3,0,0,]
 
 console.log(moveZerosToEnd([0, 10,20,0, 2, 9,0, 3]));  // [10,20,2,9,3,0,0,0]
+
+const students = [
+  { name: "Faiz", class: "10" },
+  { name: "Raju", class: "9" },
+  { name: "Aman", class: "10" },
+  { name: "Nabeela", class: "9" }
+];
+
+const grouped = students.reduce((acc, s) => {
+  if (!acc[s.class]) acc[s.class] = [];
+  acc[s.class].push(s);
+  return acc;
+}, {});
+
+console.log(grouped);

@@ -108,3 +108,15 @@ function reverseNumber(num){
     }
     
     findPrimeNumberInrange(1,10)
+
+    let num = 560739;
+let count = 0;
+
+while (num > 0) {
+  let digit = num % 10;
+  if (digit === 0) break;
+  count++;
+  num = Math.floor(num / 10);
+}
+
+console.log(count);
