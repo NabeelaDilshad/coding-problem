@@ -20,7 +20,7 @@ username.classList.add("font-15", "class2"); // Add new classes without replacin
 username.classList.remove("class2");         // Remove a specific class
 username.classList.toggle("class1");         // Toggle a class (add/remove based on existence)
 console.log(username.classList.contains("class1")); // Check if a class exists (true/false)
-username.classList.replace("oldClass", "newClass"); // Replace an existing class
+username.classList.replace("class1", "class2"); // Replace an existing class
 console.log(username.classList.length);             // Get the total number of classes
 
 // Example: Toggling a class on button click

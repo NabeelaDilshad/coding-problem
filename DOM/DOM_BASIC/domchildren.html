@@ -10,6 +10,7 @@
     <div  id="week" class="week" style="background-color: aquamarine; margin-top: 100px;">
          <div id="Monday" class="day">Monday</div>
          <div class="day">TuesDay</div>
+         <!-- <h1 class="day">None</h1> -->
          <div class="day">Wednesday</div>
          <div class="day">ThusDay</div>
          <div class="day">Friday</div>
@@ -34,7 +35,7 @@
         const childelement = document.getElementById("Monday")
         console.log(childelement.parentElement)
 
-       const second = document.querySelector("div.day:nth-child(2)")
+       const second = document.querySelector(".day:nth-child(2)")
     //    const second1 = document.querySelector(".day:nth-of-type(2)");
        const sat = document.querySelector("div.day:nth-child(6)");
        const lt = document.querySelector("div.day:last-child");
