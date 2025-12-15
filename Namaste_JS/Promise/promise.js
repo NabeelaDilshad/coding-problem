@@ -7,19 +7,25 @@ const getPromise = function(){
        })
 }
 
-getPromise().then((data)=>{
-   console.log(data)
-})
+// const p = getPromise()
+// p.then(function(data){
+//    console.log(data)
+// }).catch((error)=>{
+//    console.log(error)
+// })
 
-const p = new Promise((resolve, reject)=>{
-  setTimeout(() => {
-    reject({ name: 'faiz', address:"kushinagar"})
-  }, 2000)
-})
 
-p.then((data) => {
-console.log(data)
-}).catch((error) => console.error(error))
+
+
+// const p = new Promise((resolve, reject)=>{
+//   setTimeout(() => {
+//     reject({ name: 'faiz', address:"kushinagar"})
+//   }, 2000)
+// })
+
+// p.then((data) => {
+// console.log(data)
+// }).catch((error) => console.error(error))
 
 // console.log(p)
 // setTimeout(()=>{
@@ -96,18 +102,16 @@ const items = [
  
   
    // Execution of steps with Promises
-  addToCart(1).then( data => {
-     return calculateTotal(data)
-  })
-  .then((total)  => {
-     return proceedToPayment(total)
-  }).then((paymentStatus) => {
-      return generateReceipt(paymentStatus)
-  }).then((finalStatus) => {
-      console.log(finalStatus)
-  }).catch((error) => {
-     console.log(error)
-  })
+  // addToCart(1).then((card) => {
+  //   return calculateTotal(card)
+  // }).then((total) => {
+  //    return proceedToPayment(total)
+  // }).then((paymentinfo) => {
+  //     return generateReceipt(paymentinfo)
+  // }).then((msg) => {
+  //   console.log(msg)
+  // })
+
 
   // or 
   // addToCart(1)
@@ -135,3 +139,23 @@ const items = [
  }).then(( data) =>{
    console.log("it will always excute because .catch return a error which is a string , string is a resolve promise  !!!")
  })
+
+ // Async/Await Version
+// async function processOrder(itemId) {
+//   try {
+//     const cartData = await addToCart(itemId);
+//     const total = await calculateTotal(cartData);
+//     const paymentStatus = await proceedToPayment(total);
+//     const finalStatus = await generateReceipt(paymentStatus);
+//     console.log(finalStatus);
+//   } catch (error) {
+//     console.log("Error:", error);
+//   } finally {
+//     console.log(
+//       "It will always execute because catch handles errors and finally always runs."
+//     );
+//   }
+// }
+
+// Execute
+processOrder(1);

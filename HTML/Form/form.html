@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    <style>
+     table, th, td {
+         border: 1px solid black;
+          border-collapse: collapse;
+      }
+    </style>
 </head>
 <body>
     <h2 style="font-size: larger;">Registration Form</h2>
@@ -60,7 +66,7 @@
 
         <!-- Comments/Additional Info (Textarea) -->
         <label for="comments">Comments or Additional Info:</label><br>
-        <textarea id="comments" name="comments" rows="5" cols="50" placeholder="Add any comments or additional information"></textarea><br><br>
+        <textarea id="comments" name="comments" rows="6" cols="50" placeholder="Add any comments or additional information"></textarea><br><br>
 
         <!-- File Upload -->
         <label for="resume">Upload Resume:</label><br>
@@ -74,6 +80,35 @@
         <button type="reset"> Reset</button>
         <button type="submit"> Sumbit</button>
     </form>
+
+    <!-- display the filed form Data -->
+     <div style="margin-top: 30px;"></div>
+    <table cellpadding="8">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Country</th>
+                <th>Languages Known</th>
+                <th>Phone Number</th>
+                <th>Comments</th>
+                <th>Resume File</th>
+                <th>Terms Accepted</th>
+            </tr>
+       </thead>
+        <!-- Example Row (You can replace with dynamic data) -->
+         <tbody id="tableList">
+            <tr>
+                <!-- this is will load dynamicaly -->
+            </tr>
+         </tbody>
+        
+    </table>
+    
+
     <script src="form.js"></script>
 </body>
 </html>

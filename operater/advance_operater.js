@@ -34,3 +34,38 @@ console.log(0 || 100); // 100
 console.log(0 ?? 100); // 0
 
 // optinal chaning operater
+
+/*
+🧠 In short:
+    Expression	          Meaning	                                         Result Type
+      !value	           Convert to boolean and invert	                        Boolean (negated)
+      !!value	           Convert to boolean (keep original truthiness)	     Boolean
+
+**/
+
+
+
+// object and array k case m compariosion hmessh reference se hoti h 
+
+// yha every object and array pointing to diff diff ref in memory 
+// console.log({} == {})  // false
+// console.log({} === {})  // false
+// console.log([] == [])   // false
+// console.log([] === [])    // false
+
+
+
+// note -  but in the case of primitive value like string , number , boolean  always compare with thier values
+
+// let a = 5
+// let b = 5
+// console.log(a == b )  // true
+
+
+
+//   users.push(nuser)                array inside propties has been changed so refrences will same
+//    users = [...users , nuser]      here assign again so refences will changes 
+
+
+//  obj[mobile] = mobilenumber                     inside object propties has been changed so refrences will same
+// obj =  { ...obj , [mobile] : mobilenumber }    here assign again so refences will changes 

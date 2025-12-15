@@ -87,6 +87,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Display the form data in the console (you can send this data to a server if needed)
     console.log(formData);
 
+    const tableElement = document.getElementById("tableList")
+    const trElement = document.createElement("tr");
+    Object.keys(formData).forEach((key) =>{
+         const thElement = document.createElement("th");
+         thElement.textContent = formData[key]
+         trElement.appendChild(thElement)
+    })
+    tableElement.appendChild(trElement)
     // Optionally, you can do further actions like sending the data to a server using AJAX
 
     // for ref
