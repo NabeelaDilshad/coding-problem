@@ -1,37 +1,33 @@
-console.log("Closures !!")
+console.log("Closures !!");
 
-
-
-// global execution 
+// global execution
 
 // a : whole code of func
 // r = undefined
-
 
 // username : "faizuddin"
 
 // b : function code
 
-function a(){
-    let username = "faizuddin"
-    function b(){
-        let username2 = "mack"
-        let price = 500
-        function c(){
-             console.log(username , username2)
-        }
-        return c;
+function a() {
+  let username = "faizuddin";
+  function b() {
+    let username2 = "mack";
+    let price = 500;
+    function c() {
+      console.log(username, username2);
     }
-    return b;
+    return c;
+  }
+  return b;
 }
 
-var r  =  a()
-var s  =   r()
-s()
+var r = a();
+var s = r();
+s();
 
 // or
-a()()()
-
+// a()()()
 
 // uses of closure
 
@@ -40,7 +36,7 @@ a()()()
 
 // IFFI function , once we create it will execude
 const CounterModule = (function () {
-  let count = 0;   // Private variable
+  let count = 0; // Private variable
 
   return {
     increment: function () {
@@ -62,131 +58,113 @@ CounterModule.increment(); // Count: 2
 CounterModule.decrement(); // Count: 1
 console.log(CounterModule.getCount()); // 1
 
-
-
-
-
 //  calculation.add(10).multy(2).minus(10).add(5)    // 15
-const calculation = (function(){
-    let count = 0;
-    return {
-         add: function (n){
-             count += n;
-             return this;
-         },
-         multy: function (n){
-            count *= n;
-            return this;
-         },
-         minus: function(n){
-            count -= n;
-            return this;
-         },
-         gettotal : function(){
-             return count;
-         }
-    }
-})()
+const calculation = (function () {
+  let count = 0;
+  return {
+    add: function (n) {
+      count += n;
+      return this;
+    },
+    multy: function (n) {
+      count *= n;
+      return this;
+    },
+    minus: function (n) {
+      count -= n;
+      return this;
+    },
+    gettotal: function () {
+      return count;
+    },
+  };
+})();
 
-const result = calculation.add(10).multy(2).minus(10).add(5).gettotal() // 15
+const result = calculation.add(10).multy(2).minus(10).add(5).gettotal(); // 15
 // console.log(result)
 
-
-
-
-
-// 2. function curring 
-function getA(x){
-     return function getB(y){
-           return function getC(z){
-                 return x+y+z;
-           }
-     }
+// 2. function curring
+function getA(x) {
+  return function getB(y) {
+    return function getC(z) {
+      return x + y + z;
+    };
+  };
 }
 
 const finaltotal = getA(10)(5)(2);
-console.log(finaltotal)
+console.log(finaltotal);
 
-
-
-
-console.log("````` memorization technique `````````````")
-// memorization technique 
+console.log("````` memorization technique `````````````");
+// memorization technique
 // Memoization is an optimization technique to cache results of expensive function calls.
 
-function getProfile(username){  // 'Nabeela'
- // asume this data comming from DB call
-    const studentlist = [
-        {
-            name :"nabeela",
-            rollno:21478368743,
-            course : "BTECH",
-            year : 2020-2025
-       },
-       {
-        name :"mack",
-        rollno:21478354343,
-        course : "BTECH",
-        year : 2020-2025
-       },
-       {
-        name :"john",
-        rollno:214432478368743,
-        course : "BTECH",
-        year : 2020-2025
-       }
-    ]
+function getProfile(username) {
+  // 'Nabeela'
+  // asume this data comming from DB call
+  const studentlist = [
+    {
+      name: "nabeela",
+      rollno: 21478368743,
+      course: "BTECH",
+      year: 2020 - 2025,
+    },
+    {
+      name: "mack",
+      rollno: 21478354343,
+      course: "BTECH",
+      year: 2020 - 2025,
+    },
+    {
+      name: "john",
+      rollno: 214432478368743,
+      course: "BTECH",
+      year: 2020 - 2025,
+    },
+  ];
 
-    if(username === "Nabeela"){
-        return studentlist[0];
-    }
-    if( username === "mack"){
-          return studentlist[1]
-    }
-    if( username === "john"){
-        return studentlist[2]
-    }
+  if (username === "Nabeela") {
+    return studentlist[0];
+  }
+  if (username === "mack") {
+    return studentlist[1];
+  }
+  if (username === "john") {
+    return studentlist[2];
+  }
 }
 
-
-function getProfileCheche(fun){
-    let studentcheche = {};
-     return function(...args){                  // ['Nabeela']
-           const studentname = args[0]         //  'Nabeela'
-           if(studentcheche[studentname]){
-               console.log(`calling from cheche`)
-              return studentcheche[studentname]
-           }
-           else{
-                console.log(`calling from DB`)
-                const result =  fun(studentname)    /**  {
+function getProfileCheche(fun) {
+  let studentcheche = {};
+  return function (...args) {
+    // ['Nabeela']
+    const studentname = args[0]; //  'Nabeela'
+    if (studentcheche[studentname]) {
+      console.log(`calling from cheche`);
+      return studentcheche[studentname];
+    } else {
+      console.log(`calling from DB`);
+      const result = fun(studentname); /**  {
                                                             name :"nabeela",
                                                             rollno:21478368743,
                                                             course : "BTECH",
                                                             year : 2020-2025
                                                      }*/
-                studentcheche[studentname] = result
-                return result;
-           }
-     }
+      studentcheche[studentname] = result;
+      return result;
+    }
+  };
 }
 
 const profilecall = getProfileCheche(getProfile);
-profilecall("Nabeela")
-profilecall("Nabeela")
+profilecall("Nabeela");
+profilecall("Nabeela");
 
+profilecall("mack");
+profilecall("mack");
+profilecall("mack");
 
-profilecall("mack")
-profilecall("mack")
-profilecall("mack")
-
-
-
-
-
-
-
-console.log("-------------------------- Settimeout --------------------------")
+console.log("-------------------------- Settimeout --------------------------");
 
 // console.log("start")
 // setTimeout(function(){
@@ -194,9 +172,7 @@ console.log("-------------------------- Settimeout --------------------------")
 // },1000)
 // console.log("third")
 
-
 // question  ,1 2,3,4,5,
-
 
 /** 
         function a(){
@@ -209,40 +185,70 @@ console.log("-------------------------- Settimeout --------------------------")
 
 */
 
-
-function getCounter(){
-  for( var i =1; i <= 5 ; i++){
-      setTimeout(() => {
-         console.log(i);
-      }, 1000*i)
+function getCounter() {
+  for (var i = 1; i <= 5; i++) {
+    setTimeout(() => {
+      console.log(i);
+    }, 1000 * i);
   }
 }
 
 getCounter();
- 
 
-function getCounterLet(){
-  for( let i =1; i <= 5 ; i++){
-      setTimeout(() => {
-         console.log(i);
-      }, 1000*i)
+function getCounterLet() {
+  for (let i = 1; i <= 5; i++) {
+    setTimeout(() => {
+      console.log(i);
+    }, 1000 * i);
   }
 }
 
 getCounterLet();
 
-
-
-function getCounter(){
-  var i
-  for( i =1; i <= 5 ; i++){
-      function newfunction(index){
-          setTimeout(() => {
-              console.log(index);
-          }, 1000*index)
-      }
-      newfunction(i);
+function getCounter() {
+  var i;
+  for (i = 1; i <= 5; i++) {
+    function newfunction(index) {
+      setTimeout(() => {
+        console.log(index);
+      }, 1000 * index);
+    }
+    newfunction(i);
   }
 }
 
 getCounter();
+
+
+function factorialFn(n){
+    let fac = 1;
+    for(let i = n; i > 0 ; i--){
+        fac = fac * i
+    }
+    return fac
+}
+
+
+const memorization = (fn) => {
+    let cache = { };
+    return function(n){
+        if(cache[n]){
+             console.log("value is comming from cache")
+             return cache[n]
+        }
+        
+        else {
+           const result = fn(n)
+           cache[n] = result
+           console.log("value is comming from api")
+           return result
+        }
+    }
+    
+}
+
+
+const factorial = memorization(factorialFn)
+console.log(factorial(10))
+console.log(factorial(10))
+console.log(factorial(5))
