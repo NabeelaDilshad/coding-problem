@@ -14,7 +14,7 @@ function getuser(){
             console.log(name)
             function thirdfunction(){
                 let address = 'aligarh'
-                console.log("i am from " + address, a, username)
+               //  console.log("i am from " + address, a, username)
             }
             thirdfunction();
      }
@@ -24,14 +24,30 @@ function getuser(){
 getuser();
 
 
+let number = 100;
+function getnumber(){
+     let number = 200;
+     if(number == 200){
+          let number = 300;
+          console.log(number)
+     }
+     console.log(number)
+}
+getnumber()
+console.log(number)
+
+
+
 
 function ab(){
-     var b =10;
+     let b =10;
      c();
      function c(){
+          let a = 20;
           console.log(b);
      }
 }
 
 ab()
+
 
