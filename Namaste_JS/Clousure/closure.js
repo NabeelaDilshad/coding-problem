@@ -83,7 +83,10 @@ const calculation = (function () {
 const result = calculation.add(10).multy(2).minus(10).add(5).gettotal(); // 15
 // console.log(result)
 
-// 2. function curring
+// 2. function curring =
+// Currying is a functional programming technique in JavaScript 
+// that transforms a function taking multiple arguments into a sequence of nesting functions, 
+// each taking exactly one argument
 function getA(x) {
   return function getB(y) {
     return function getC(z) {
@@ -244,7 +247,7 @@ const memorization = (fn) => {
            return result
         }
     }
-    
+
 }
 
 
@@ -252,3 +255,49 @@ const factorial = memorization(factorialFn)
 console.log(factorial(10))
 console.log(factorial(10))
 console.log(factorial(5))
+
+// infinite curring
+function infinteCur(a){ // 10
+    return function(b){  // 20
+        if(b){
+          return infinteCur(a+b) // 30
+        }
+        return a;
+    }
+}
+
+console.log(infinteCur(10)(20)(10)(5)(10)());
+
+
+// var with closure solution
+function x() {
+    for (var i = 1; i <= 5; i++) {
+
+        function close(x) {
+            setTimeout(function () {
+                console.log(x);
+            }, x * 1000);
+        }
+
+        close(i);
+    }
+
+    console.log("Namaste JavaScript");
+}
+
+x();
+
+
+console.log("start")
+setTimeout(function() {
+    console.log("setTimeout 2 sec")
+}, 2000);
+
+
+console.log("end")
+// Block main thread for ~10 seconds
+const startTime = Date.now();
+
+while (Date.now() - startTime < 10000) {
+    // Busy waiting
+}

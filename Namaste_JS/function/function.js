@@ -5,7 +5,6 @@ function a() {
   console.log("a");
 }
 a();
-
 // 2 function expression , named function
 var secondfunction = function u() {
   console.log(`function expression`);
