@@ -142,3 +142,14 @@ while (endDate < startDate + 10000) {
 }
 
 console.log("While expires");
+
+/** 
+One Line Definition
+Callback Function
+
+A function passed as an argument to another function and executed later.
+
+Higher Order Function (HOF)
+
+A function that accepts another function as an argument or returns a function.
+*/

@@ -1,6 +1,10 @@
 
 // add to card --> proceed to payment ---> order successful
 
+// The Event Loop is a mechanism in JavaScript that continuously checks whether the Call Stack is empty. 
+// When it is, the Event Loop takes pending tasks from the queues and pushes them to the Call Stack for execution. 
+// This allows JavaScript, which is single-threaded, to handle asynchronous operations 
+// like timers, promises, and user events.
 
 // Simulated list of items
 const items = [
