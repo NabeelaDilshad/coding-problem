@@ -132,3 +132,26 @@ const p = Promise.resolve("Hello");
 p.then(console.log);
 
 Promise.reject("Error occurred").catch(console.log);
+
+
+/** 
+                Interview Summary
+      Promise.all()
+      → Sab success hone chahiye.
+
+      Promise.allSettled()
+      → Sabka result chahiye.
+
+      Promise.race()
+      → Jo pehle settle ho (resolve/reject).
+
+      Promise.any()
+      → Jo pehle resolve ho.
+
+      Promise.resolve()
+      → Resolved promise create karta hai.
+
+      Promise.reject()
+      → Rejected promise create karta hai.
+
+*/
