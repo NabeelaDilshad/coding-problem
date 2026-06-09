@@ -159,3 +159,12 @@ const items = [
 
 // Execute
 processOrder(1);
+
+
+// notes 
+
+Promise.resolve()
+  .then(() => {
+    return 2 // equivalent to Promise.resolve(2)
+  })
+  .then(console.log);  // equivalent to .then(data => console.log(data))
