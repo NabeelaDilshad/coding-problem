@@ -225,3 +225,351 @@ console.log("5");
 // 4
 // 2
 
+
+                            // Async Await Questions
+
+
+/**  ------------------------    Question 16  ------------------------   */
+
+console.log("Start");
+
+async function test() {
+  console.log("Inside")
+  return 5
+}
+
+test().then((d) => console.log(d))
+
+console.log("End");
+
+// Start
+// Inside
+// End
+// 5
+
+
+/**  ------------------------    Question 17  ------------------------   */
+
+console.log("Start");
+
+async function test() {
+  console.log("Inside");
+
+  await Promise.resolve();
+
+  console.log("After Await");
+}
+
+test();
+
+console.log("End");
+
+// Start
+// Inside
+// End
+// After Await
+
+
+/**  ------------------------    Question 18  ------------------------   */
+
+
+async function test() {
+  return 10;
+}
+
+console.log(test());
+
+// Promise { 10 }
+
+
+/**  ------------------------    Question 19  ------------------------   */
+
+
+console.log(1);
+
+setTimeout(() => {
+  console.log(2);
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log(3);
+});
+
+console.log(4);
+
+// 1
+// 4
+// 3
+// 2
+
+/**  ------------------------    Question 20  ------------------------   */
+
+console.log(1);
+
+setTimeout(() => {
+  console.log(2);
+}, 0);
+
+const p = new Promise((res, rej) =>{
+     console.log("hey")
+     return res("3")
+})
+
+p.then((f) => {
+  console.log(f);
+});
+
+console.log(4);
+
+// 1
+// hey
+// 4
+// 3
+// 2
+
+
+/**  ------------------------    Question 21  ------------------------   */
+
+async function test() {
+  console.log("A");
+
+  await Promise.resolve();
+
+  console.log("B");
+}
+
+test();
+
+console.log("C");
+
+
+// A
+// C
+// B
+
+
+/**  ------------------------    Question 22  ------------------------   */
+
+
+async function test() {
+  console.log("1");
+
+  await Promise.resolve();
+
+  console.log("2");
+
+  await Promise.resolve();
+
+  console.log("3");
+}
+
+test();
+
+console.log("4");
+
+// 1
+// 4
+// 2
+// 3
+
+
+
+/**  ------------------------    Question 23  ------------------------   */
+
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timeout");
+}, 0);
+
+async function test() {
+  console.log("Async Start");
+
+  await Promise.resolve();
+
+  console.log("Async End");
+}
+
+test();
+
+console.log("End");
+
+
+// start
+// Async Start
+// End
+// Async End
+// "Timeout"
+
+
+
+/**  ------------------------    Question 24  ------------------------   */
+
+async function test() {
+  return await Promise.resolve(5);
+}
+
+test().then(console.log);
+
+// 5
+
+
+
+
+/**  ------------------------    Question 25  ------------------------   */
+
+async function test() {
+  throw new Error("Failed");
+}
+
+test().catch(console.log);
+
+// Error: Failed , throw inside async function becomes rejected promise.
+
+
+
+/**  ------------------------    Question 26  ------------------------   */
+
+
+console.log("A");
+
+async function test() {
+  console.log("B");
+
+  await Promise.resolve();
+
+  console.log("C");
+}
+
+test();
+
+Promise.resolve().then(() => {
+  console.log("D");
+});
+
+console.log("E");
+
+// A
+// B
+// E
+// C
+// D
+
+
+
+/**  ------------------------    Question 27  ------------------------   */
+
+console.log("1");
+
+setTimeout(() => console.log("2"), 0);
+
+Promise.resolve().then(() => {
+  console.log("3");
+
+  Promise.resolve().then(() => {
+    console.log("4");
+  });
+});
+
+console.log("5");
+
+// 1
+// 5
+// 3
+// 4
+// 2
+
+
+/**  ------------------------    Question 28  ------------------------   */
+
+
+async function test() {
+  console.log(1);
+
+  await Promise.resolve();
+
+  console.log(2);
+}
+
+test();
+
+queueMicrotask(() => {
+  console.log(3);
+});
+
+console.log(4);
+
+// 1
+// 4
+// 2
+// 3
+
+
+/**  ------------------------    Question 29  ------------------------   */
+
+console.log("Start");   
+
+setTimeout(() => {
+  console.log("Timeout");
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("Promise1");
+});
+
+(async () => {
+  console.log("Async1");
+
+  await Promise.resolve();
+
+  console.log("Async2");
+})();
+
+Promise.resolve().then(() => {
+  console.log("Promise2");
+});
+
+console.log("End");
+
+// Start
+// Async1
+// End
+// Promise1
+// Async2
+// Promise2
+// Timeout
+
+
+/**  ------------------------    Question 30  ------------------------   */
+
+async function test() {
+  console.log("1");
+
+  await Promise.resolve();
+
+  console.log("2");
+
+  await Promise.resolve();
+
+  console.log("3");
+}
+
+Promise.resolve().then(() => {
+  console.log("4");
+});
+
+test();
+
+Promise.resolve().then(() => {
+  console.log("5");
+});
+
+console.log("6");
+
+// 1
+// 6
+// 4
+// 2
+// 5
+// 3
