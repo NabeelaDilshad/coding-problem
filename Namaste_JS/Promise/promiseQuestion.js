@@ -573,3 +573,33 @@ console.log("6");
 // 2
 // 5
 // 3
+
+/**  ------------------------    Question 31  ------------------------   */
+
+
+console.log("A");
+
+async function getData() {
+  console.log("B");
+
+  await fetch(
+    "https://jsonplaceholder.typicode.com/users/1"
+  );
+
+  console.log("C");
+}
+
+getData();
+
+Promise.resolve().then(() => {
+  console.log("D");
+});
+
+console.log("E");
+
+
+// A
+// B
+// E
+// D
+// C
