@@ -91,7 +91,7 @@ const user = {
       return this.firstName;
     }
   };
-  console.log(user.getName());   // What is logged?
+  console.log(user.getName());   // What is logged?   // Piyush
 
 
 
@@ -108,7 +108,7 @@ const user = {
   
   let user1 = makeUser();
   
-  console.log('question2 ', user1.ref.name );   // What's the result?
+  console.log('question2 ', user1.ref.name );   // What's the result?  // Undefined
   
 
 
@@ -123,7 +123,7 @@ const user = {
     };
   }
   let user2 = makeUser1();
-  console.log('question2 update', user2.ref().name);
+  console.log('question2 update', user2.ref().name); // John
 
 
 
@@ -199,7 +199,7 @@ const user = {
     name: "Faiz",
     greet() {
         const inner = () => {
-            console.log(this.name); // Faiz , because inside arrow function value of this will resolve lexically 
+            console.log(this.name);  // Faiz , because inside arrow function value of this will resolve lexically 
         };
         inner();
     }
@@ -244,6 +244,7 @@ const user = {
     name: "Faiz",
 
     greet() {
+        // yha pr this ki value user object 
         setTimeout(() => {
             console.log(this.name); // Faiz , because inside arrow function value of this will resolve lexically
         }, 1000);
