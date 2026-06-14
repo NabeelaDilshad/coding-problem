@@ -64,3 +64,10 @@ const months = ["Jan", "Mar", "Apr", "May"];
 
 const months2 = months.toSpliced(1, 0, "Feb");
 console.log(months2, months); 
+
+function test(n1 = 1, n2 = 2){
+    console.log(n1+n2)
+}
+
+test()
+test(10)
