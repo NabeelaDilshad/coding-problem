@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll & Coordinates Playground</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        height: 3000px;
+        padding: 20px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      .info {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        width: 350px;
+        background: #111;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 14px;
+        z-index: 999;
+      }
+
+      .box {
+        width: 400px;
+        height: 200px;
+        border: 10px solid red;
+        padding: 20px;
+        overflow: auto;
+        margin-top: 50px;
+      }
+
+      .content {
+        width: 800px;
+        height: 800px;
+        background: linear-gradient(yellow, orange);
+      }
+
+      .target {
+        width: 200px;
+        height: 100px;
+        background: lightblue;
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Scroll, Size & Mouse Coordinates Demo</h1>
+
+    <button id="scrollByBtn">scrollBy(0,100)</button>
+    <button id="scrollToBtn">scrollTo(0,0)</button>
+
+    <div class="target" id="target">Click Me</div>
+
+    <div class="box" id="box">
+      <div class="content"></div>
+    </div>
+
+    <div class="info" id="info">Move Mouse / Scroll Page</div>
+
+    <script>
+      const info = document.getElementById("info");
+      const box = document.getElementById("box");
+      const target = document.getElementById("target");
+
+      /*
+===================================
+scrollBy
+===================================
+*/
+      document.getElementById("scrollByBtn").addEventListener("click", () => {
+        window.scrollBy(0, 100);
+        window.scrollBy(0, 500);
+      });
+
+      /*
+===================================
+scrollTo
+===================================
+*/
+      document.getElementById("scrollToBtn").addEventListener("click", () => {
+        window.scrollTo(0, 100);
+      });
+
+      /*
+===================================
+Page Scroll Values
+===================================
+*/
+      window.addEventListener("scroll", () => {
+        console.clear();
+
+        console.log("pageYOffset =", window.pageYOffset);
+        console.log("pageXOffset =", window.pageXOffset);
+
+        console.log("scrollY =", window.scrollY);
+        console.log("scrollX =", window.scrollX);
+      });
+
+      /*
+===================================
+Mouse Coordinates
+===================================
+*/
+      document.addEventListener("mousemove", (e) => {
+        info.innerHTML = `
+  <h3>Mouse Coordinates</h3>
+
+  clientX : ${e.clientX}<br>
+  clientY : ${e.clientY}<br><br>
+
+  pageX : ${e.pageX}<br>
+  pageY : ${e.pageY}<br><br>
+
+  screenX : ${e.screenX}<br>
+  screenY : ${e.screenY}<br><br>
+
+  offsetX : ${e.offsetX}<br>
+  offsetY : ${e.offsetY}<br>
+  `;
+      });
+
+      /*
+===================================
+offsetTop / offsetLeft
+===================================
+*/
+      console.log("offsetTop =", target.offsetTop);
+
+      console.log("offsetLeft =", target.offsetLeft);
+
+      /*
+===================================
+scrollTop / scrollLeft
+===================================
+*/
+      box.addEventListener("scroll", () => {
+        console.log("div.scrollTop =", box.scrollTop);
+
+        console.log("div.scrollLeft =", box.scrollLeft);
+      });
+
+      /*
+===================================
+scrollWidth / scrollHeight
+===================================
+*/
+      console.log("scrollWidth =", box.scrollWidth);
+
+      console.log("scrollHeight =", box.scrollHeight);
+
+      /*
+===================================
+offsetWidth / offsetHeight
+===================================
+*/
+      console.log("offsetWidth =", box.offsetWidth);
+
+      console.log("offsetHeight =", box.offsetHeight);
+
+      /*
+===================================
+clientWidth / clientHeight
+===================================
+*/
+      console.log("clientWidth =", box.clientWidth);
+
+      console.log("clientHeight =", box.clientHeight);
+
+      /*
+===================================
+Formula
+===================================
+
+pageY = clientY + scrollY
+pageX = clientX + scrollX
+
+===================================
+*/
+    </script>
+  </body>
+</html>
