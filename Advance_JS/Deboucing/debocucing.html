@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Debounce Example</title>
+  </head>
+
+  <body>
+    <h2>Debouncing Demo</h2>
+
+    <input type="text" id="search" placeholder="Type something..." />
+
+    <ul id="result"></ul>
+
+    <script>
+      const movies = [
+        {
+          id: 1,
+          title: "Inception",
+          year: 2010,
+          genre: "Sci-Fi",
+        },
+        {
+          id: 2,
+          title: "The Dark Knight",
+          year: 2008,
+          genre: "Action",
+        },
+        {
+          id: 3,
+          title: "Interstellar",
+          year: 2014,
+          genre: "Sci-Fi",
+        },
+        {
+          id: 4,
+          title: "The Matrix",
+          year: 1999,
+          genre: "Sci-Fi",
+        },
+        {
+          id: 5,
+          title: "Avengers: Endgame",
+          year: 2019,
+          genre: "Superhero",
+        },
+      ];
+
+      const resultEL = document.getElementById("result");
+
+      function renderMoviesList(filterM) {
+        resultEL.textContent = "";
+        if (filterM.length === 0) {
+          resultEL.textContent = "No movies found";
+          return;
+        }
+
+        filterM.forEach((m) => {
+          const liELement = document.createElement("li");
+          liELement.textContent = m.title;
+          resultEL.appendChild(liELement);
+        });
+      }
+
+      function handleSearch(event) {
+        console.log("call the api", event.target.value);
+        const searchText = String(event.target.value).trim().toLowerCase();
+        const filterM = movies.filter((item) =>
+          item.title.toLowerCase().includes(searchText),
+        );
+        renderMoviesList(filterM);
+      }
+
+      function debouceFn(fn, delay) {
+        let timer;
+        return function (...args) {
+          clearTimeout(timer);
+          timer = setTimeout(() => {
+            fn.apply(this, args);
+          }, delay);
+        };
+      }
+
+      const inputElement = document.getElementById("search");
+
+      const debounceS = debouceFn(handleSearch, 500);
+      inputElement.addEventListener("input", (event) => debounceS(event));
+    </script>
+  </body>
+</html>
