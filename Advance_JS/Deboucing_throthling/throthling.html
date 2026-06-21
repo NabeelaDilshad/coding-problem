@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throthling</title>
+</head>
+
+<body>
+    <div id="posts"></div>
+    <script>
+        const postsEl = document.getElementById("posts");
+
+        let page = 1;
+        let isLoading = false;
+
+        function throttle(fn, delay) {
+            let lastCall = 0;
+            // let skip = false
+
+            return function (...args) {
+                // if(!skip){
+                //    fn.apply(this, args);
+                //    skip = true
+
+                //    setTimeout(() => {
+                //       skip = false 
+                //    }, delay)
+                // }
+
+                const now = Date.now(); 
+
+                if (now - lastCall >= delay) {
+                    lastCall = now;
+                    fn.apply(this, args);
+                }
+            };
+        }
+
+        async function fetchPosts() {
+            if (isLoading) return;
+
+            isLoading = true;
+
+            console.log(`Fetching page ${page}...`);
+
+            // Fake API delay
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+
+            for (let i = 1; i <= 10; i++) {
+                const div = document.createElement("div");
+                div.textContent = `Post ${(page - 1) * 10 + i}`;
+                postsEl.appendChild(div);
+            }
+
+            page++;
+            isLoading = false;
+        }
+
+        function handleScroll() {
+            const scrollTop = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            // User is near bottom
+            if (scrollTop + windowHeight >= documentHeight - 200) {
+                fetchPosts();
+            }
+        }
+
+        const throttledScroll = throttle(handleScroll, 300);
+
+        window.addEventListener("scroll", throttledScroll);
+
+        // Initial load
+        fetchPosts();
+    </script>
+</body>
+
+</html>
