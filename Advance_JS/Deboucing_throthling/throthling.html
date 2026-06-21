@@ -16,25 +16,25 @@
         let isLoading = false;
 
         function throttle(fn, delay) {
-            let lastCall = 0;
-            // let skip = false
+            // let lastCall = 0;
+            let skip = false
 
             return function (...args) {
-                // if(!skip){
-                //    fn.apply(this, args);
-                //    skip = true
+                if(!skip){
+                   fn.apply(this, args);
+                   skip = true
 
-                //    setTimeout(() => {
-                //       skip = false 
-                //    }, delay)
-                // }
-
-                const now = Date.now(); 
-
-                if (now - lastCall >= delay) {
-                    lastCall = now;
-                    fn.apply(this, args);
+                   setTimeout(() => {
+                      skip = false 
+                   }, delay)
                 }
+
+                // const now = Date.now(); 
+
+                // if (now - lastCall >= delay) {
+                //     lastCall = now;
+                //     fn.apply(this, args);
+                // }
             };
         }
 
