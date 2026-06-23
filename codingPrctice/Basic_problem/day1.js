@@ -61,7 +61,6 @@ evenNumberSum(323564)  // 12
 
 
 
-<<<<<<< HEAD
 function isPrime(num) {
     // write your code her
 
@@ -84,7 +83,6 @@ function findPrimeNumberInrange(num) {
 console.log(findPrimeNumberInrange(1, 10))
 console.log(findPrimeNumberInrange(10, 30))
 console.log(findPrimeNumberInrange(20, 60))
-=======
 function isPrime(num){
    // if number is 1 or  less then 1  then not prime
    if(num <= 1) {
@@ -126,4 +124,3 @@ function findPrimeNumberInrange(start, end){
  findPrimeNumberInrange(1,10)
 findPrimeNumberInrange(10,30) 
 findPrimeNumberInrange(20,60)
->>>>>>> 8f36b5b6aa9f9505639e34dccf8f6a05d48f7199
