@@ -1,0 +1,82 @@
+1995 → JavaScript Created
+
+1997 → ES1
+        ✔ First Standard
+
+1998 → ES2
+        ✔ ISO Alignment
+
+1999 → ES3
+        ✔ Regex
+        ✔ try/catch
+        ✔ switch
+
+2009 → ES5
+        ✔ "use strict"
+        ✔ JSON
+        ✔ map(), filter(), reduce()
+
+2015 → ES6 ⭐⭐⭐⭐⭐
+        ✔ let / const
+        ✔ Arrow Functions
+        ✔ Classes
+        ✔ Template Literals
+        ✔ Destructuring
+        ✔ Default Parameters
+        ✔ Spread / Rest
+        ✔ Modules
+        ✔ Promises
+        ✔ Symbols
+
+2016 → ES7
+        ✔ includes()
+        ✔ **
+
+2017 → ES8
+        ✔ async/await
+        ✔ Object.values()
+        ✔ Object.entries()
+
+2018 → ES9
+        ✔ Object Spread
+        ✔ Object Rest
+        ✔ for await...of
+
+2019 → ES10
+        ✔ flat()
+        ✔ flatMap()
+        ✔ Object.fromEntries()
+
+2020 → ES11
+        ✔ BigInt
+        ✔ Optional Chaining (?.)
+        ✔ Nullish Coalescing (??)
+
+2021 → ES12
+        ✔ replaceAll()
+        ✔ &&= ||= ??=
+        ✔ Promise.any()
+
+2022 → ES13
+        ✔ Class Fields
+        ✔ Top-level await
+        ✔ at()
+
+2023 → ES14
+        ✔ toSorted()
+        ✔ toReversed()
+        ✔ toSpliced()
+        ✔ with()
+
+2024 → ES15
+        ✔ Object.groupBy()
+        ✔ Promise.withResolvers()
+
+2025 → ES16
+        ✔ Set Methods
+        ✔ Improved Regex
+
+2026 → ES17
+        ✔ Temporal API
+        ✔ using / await using
+        ✔ Explicit Resource Management
