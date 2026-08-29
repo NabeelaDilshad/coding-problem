@@ -248,3 +248,32 @@ monthbyCode(4);
 monthbyCode(5);
 monthbyCode(6);
 
+
+
+// print prime numbers between 1 to n
+
+function isPrime(n) {
+    if (n < 2) {
+        return false;
+    }
+
+    for (let i = 2; i * i <= n; i++) {
+        if (n % i === 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+
+
+function printPrimes(n) {
+    for (let num = 2; num <= n; num++) { 
+        if(isPrime(num)){
+             console.log(num)
+        }
+    }
+}
+
+printPrimes(20);
